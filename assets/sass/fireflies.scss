@@ -52,10 +52,10 @@ ul.fireflies li:nth-of-type(1){
     height: 0.3px;
     border-radius: 50%;
 
-    -webkit-animation-delay:  7s;
-    -moz-animation-delay:  7s;
-    -ms-animation-delay:  7s;
-    animation-delay:  7s;
+    -webkit-animation-delay:  4s;
+    -moz-animation-delay:  4s;
+    -ms-animation-delay:  4s;
+    animation-delay:  4s;
 
     -webkit-animation-duration: 30s, 22s;
     -moz-animation-duration: 30s, 22s;
@@ -231,12 +231,16 @@ ul.fireflies li:nth-of-type(8){
         height: 4px
         }
     25%{
-        bottom:10%; 
+        bottom: 10%; 
     }
     50%{
         top: 50%;
         width: 5px;
         height: 5px
     }
-    75%{top:95%;width:10px;height:10px }
+    75%{
+        top: 95%;
+        width: 10px;
+        height :10px 
+    }
 }

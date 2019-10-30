@@ -164,10 +164,10 @@ header.major.last h2 {
 a.icon.brands {
   font-size: 2em !important; }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1600px) {
   #header p {
     font-size: 1.5em !important; }
   #main::before {
-    top: 100px !important; }
+    top: 150px !important; }
   #main {
     margin-top: -200px !important; } }

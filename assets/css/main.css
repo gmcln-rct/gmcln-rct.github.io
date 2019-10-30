@@ -166,11 +166,11 @@ header.major.last h2 {
 a.icon.brands {
   font-size: 2em !important; }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1600px) {
   #header p {
     font-size: 1.5em !important; }
   #main::before {
-    top: 100px !important; }
+    top: 150px !important; }
   #main {
     margin-top: -200px !important; } }
 
@@ -210,10 +210,10 @@ ul.fireflies li:nth-of-type(1) {
   width: 0.3px;
   height: 0.3px;
   border-radius: 50%;
-  -webkit-animation-delay: 7s;
-  -moz-animation-delay: 7s;
-  -ms-animation-delay: 7s;
-  animation-delay: 7s;
+  -webkit-animation-delay: 4s;
+  -moz-animation-delay: 4s;
+  -ms-animation-delay: 4s;
+  animation-delay: 4s;
   -webkit-animation-duration: 30s, 22s;
   -moz-animation-duration: 30s, 22s;
   -ms-animation-duration: 30s, 22s;

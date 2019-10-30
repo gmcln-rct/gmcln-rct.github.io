@@ -231,19 +231,20 @@ a.icon.brands {
 }
 
 // MEDIA QUERIES
-@media screen and (max-width: 1400px) {
 
-  #header p {
-    font-size: 1.5em !important;
+@media screen and (max-width: 1600px) {
+
+    #header p {
+      font-size: 1.5em !important;
+    }
+    #main::before {
+    // display: none;
+    top: 150px !important;
   }
-  #main::before {
-  // display: none;
-  top: 100px !important;
-}
 
-#main {
-    margin-top: -200px !important;
+  #main {
+      margin-top: -200px !important;
 
-}
+  }
 
 }
