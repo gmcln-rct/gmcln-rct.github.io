@@ -145,11 +145,12 @@ header.major p {
 
 // SKILLS SECTION
 
-  .skills-languages {
-    display: flex;
+  ul.skills-languages {
+    display: flex !important;
     justify-content: space-evenly;
-    align-content: flex-start;
-    flex-grow: 1;
+    align-content: center;
+    flex-wrap: wrap;
+    // flex-grow: 1;
     
     width: 700px;
     max-width: 80%;
@@ -158,17 +159,17 @@ header.major p {
     border-radius: 10px;
   }
 
-  .skills-languages li {
+  ul.skills-languages li {
     // display: inline !important;
     margin: 20px !important;
     font-weight: 700;
     text-align: center;
   }
-  .skills-languages .icons {
+  ul.skills-languages .icons {
 		font-size: 4em;
   }
   
- .skills-languages svg {
+ ul.skills-languages svg {
     width: 4em;
     height: auto;
 	}
@@ -209,7 +210,10 @@ header.major p {
 }
 
 
+#footer a {
+  font-size: 2em;
+}
+
 a.icon.brands {
   font-size: 2em !important;
 }
-
