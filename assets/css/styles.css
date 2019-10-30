@@ -1,5 +1,7 @@
 body {
-  background-color: #05244F; }
+  background-color: #05244F;
+  margin: 0;
+  overflow: hidden; }
 
 h1, h2 {
   color: white !important; }
@@ -10,6 +12,9 @@ h1 {
 h2 {
   font-size: 1.3em !important;
   margin-top: -0.5em !important; }
+
+#header {
+  background-color: black; }
 
 #header h1 {
   z-index: 2; }
@@ -129,3 +134,71 @@ header.major p {
 
 a.icon.brands {
   font-size: 2em !important; }
+
+ul.fireflies {
+  list-style: none; }
+
+li {
+  width: 21px;
+  top: -20px;
+  height: 21px;
+  position: absolute;
+  background-color: #FFBF00;
+  border-radius: 10px;
+  box-shadow: 0 0 40px 20px #fff, 0 0 100px 50px #0ff;
+  animation: leftright 24s infinite cubic-bezier(0.39, 0, 0.63, 1), updown 8s infinite 1.25s cubic-bezier(0.39, 0, 0.63, 1); }
+
+li:nth-of-type(2) {
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  animation-delay: 4s;
+  animation-duration: 27s, 8s;
+  animation-fill-mode: backwards, backwards; }
+
+li:nth-of-type(3) {
+  animation-delay: 1.5s;
+  animation-duration: 24s, 18s;
+  animation-fill-mode: backwards, backwards; }
+
+li:nth-of-type(4) {
+  animation-delay: 5.5s;
+  animation-duration: 30s, 13s; }
+
+li:nth-of-type(5) {
+  animation-fill-mode: backwards, backwards;
+  animation-duration: 32s, 15s; }
+
+li:nth-of-type(6) {
+  animation-fill-mode: backwards, backwards;
+  animation-duration: 42s, 15s; }
+
+@keyframes leftright {
+  0%, 100% {
+    left: 20%; }
+  16.666% {
+    left: 90%; }
+  33.333% {
+    left: 10%; }
+  50% {
+    left: 50%; }
+  66.666% {
+    left: 70%; }
+  83.333% {
+    left: 40%; } }
+
+@keyframes updown {
+  0%, 100% {
+    top: 0px;
+    width: 20px;
+    height: 20px; }
+  25% {
+    top: 70%; }
+  50% {
+    top: 50%;
+    width: 30px;
+    height: 30px; }
+  75% {
+    top: 70%;
+    width: 10px;
+    height: 10px; } }
