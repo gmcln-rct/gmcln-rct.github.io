@@ -1,0 +1,198 @@
+// CUSTOM STYLES
+
+body {
+ background-color: #05244F;
+}
+
+h1, h2 {
+  color: white !important;
+}
+h1 {
+    font-size: 2em !important;
+}
+h2 {
+    font-size: 1.3em !important;
+    margin-top: -0.5em !important;
+    // margin-bottom: .3em !important;
+
+}
+
+#header h1 {
+  // margin-bottom: 0;
+  z-index: 2;
+}
+
+#header-content h1 {
+  z-index: 2;
+}
+
+
+// Video BG
+
+.video-container {
+
+    height: 100%;
+    width: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+video {
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+  top: 0;
+  left: 0;
+  // transform: translateX(-50%) translateY(-50%);
+  z-index: -1;
+
+}
+
+#headshot {
+  width: 300px;
+  height: auto;
+  max-width: 80%;
+
+  margin-top: 3em;
+  padding: 10px;
+
+  border: 1px solid rgba(255,255,255,0.5);
+
+  z-index: 2;
+}
+
+
+.header-text {
+  width: 700px;
+  height: auto;
+  max-width: 90%;
+
+  margin: 0 auto;
+  padding: 20px 40px;
+
+  font-size: 0.8em;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  line-height: 1em;
+  text-align: left;
+
+  color: #05244F;
+  background-color: white;
+  opacity: 0.8;
+
+  border-radius: 5px;
+
+  z-index: 2;
+}
+
+.header-text b {
+    color: #05244F !important;
+
+}
+
+
+// RESUME BUTTON
+
+.resume-container {
+  width: 100%;
+  margin-bottom: 3em;
+}
+
+a.resume-button {
+  // display: inline-block;
+  width: 200px !important;
+  // max-width: 50%;
+  margin-top: 40px;
+  padding: 10px 50px;
+
+  font-size: 1.2em;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  
+  color: white;
+  background-color: #1c87c9;
+  border-radius: 10px;
+  border: none;
+
+  cursor: pointer;
+}
+
+// BACKGROUND SECTION
+
+header.major {
+  opacity: 0.9;
+}
+
+header.major p {
+  margin: 0 !important;
+  padding: 1em !important;
+
+  font-size: 1.4em !important;
+}
+
+// SKILLS SECTION
+
+  .skills-languages {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: flex-start;
+    flex-grow: 1;
+    
+    width: 700px;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  .skills-languages li {
+    margin: 20px;
+    font-weight: 700;
+    text-align: center;
+  }
+  .skills-languages .icons {
+		font-size: 4em;
+  }
+  
+ .skills-languages svg {
+    width: 4em;
+    height: auto;
+	}
+
+
+
+  // PROJECTS
+
+  .project-container {
+    // padding: 20px;
+    // background-color: rgba(0,0,0,0.5);
+    margin-bottom: 100px;
+
+  }
+
+  .project-container h2 {
+    margin-top: 30px !important;
+    margin-bottom: 0px !important;
+    padding: 10px;
+
+    background-color: rgba(5,36,79,0.5) !important;
+
+    font-size: 2em !important;
+  }
+
+  .feature.left, .feature.right {
+      background-color: white;
+  }
+
+  .feature.left .image:hover {
+      -webkit-filter: saturate(0.5);
+  filter: brightness(.8) blur(1px);
+  }
+
+#footer {
+  background-color: #05244F !important;
+}
+
+
+a.icon.brands {
+  font-size: 2em !important;
+}
