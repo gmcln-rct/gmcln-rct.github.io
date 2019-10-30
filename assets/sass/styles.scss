@@ -200,10 +200,12 @@ header.major p {
       background-color: white;
   }
 
-  .feature.left .image:hover {
-      -webkit-filter: saturate(0.5);
-  filter: brightness(.8) blur(1px);
+  .feature.left .image:hover,   .feature.right .image:hover {
+      -webkit-filter: brightness(1.2) hue-rotate(80deg);
+      filter: brightness(1.2) hue-rotate(80deg);
   }
+
+
 
 #footer {
   background-color: #342857 !important;
@@ -212,6 +214,10 @@ header.major p {
 
 #footer a {
   font-size: 2em;
+}
+
+header.major.last h2 {
+font-size: 2em !important;
 }
 
 a.icon.brands {
