@@ -149,6 +149,23 @@ ul.fireflies li:nth-of-type(7) {
   -ms-animation-fill-mode: backwards, backwards;
   animation-fill-mode: backwards, backwards; }
 
+ul.fireflies li:nth-of-type(8) {
+  width: 0.85px;
+  height: 0.85px;
+  border-radius: 50%;
+  -webkit-animation-delay: 13s;
+  -moz-animation-delay: 13s;
+  -ms-animation-delay: 13s;
+  animation-delay: 13s;
+  -webkit-animation-duration: 65s, 52s;
+  -moz-animation-duration: 65s, 52s;
+  -ms-animation-duration: 65s, 52s;
+  animation-duration: 65s, 52s;
+  -webkit-animation-fill-mode: backwards, backwards;
+  -moz-animation-fill-mode: backwards, backwards;
+  -ms-animation-fill-mode: backwards, backwards;
+  animation-fill-mode: backwards, backwards; }
+
 @keyframes leftright {
   0%, 100% {
     left: 20%; }
