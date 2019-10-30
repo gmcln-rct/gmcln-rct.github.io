@@ -1,6 +1,7 @@
 // CUSTOM STYLES
 
 body {
+  overflow-x: hidden;
     background: linear-gradient(0deg, #6d5ba2, #6d5ba2, #a15b91) no-repeat center center fixed !important;
   // background-size: 600% 600%;
   -webkit-background-size: cover;
@@ -96,6 +97,11 @@ h2 {
 
 .header-text b {
     color: #05244F !important;
+}
+
+// REMOVE BACKGROUND LINES
+#header::after, #header::before {
+  display: none !important;
 }
 
 
@@ -222,4 +228,22 @@ font-size: 2em !important;
 
 a.icon.brands {
   font-size: 2em !important;
+}
+
+// MEDIA QUERIES
+@media screen and (max-width: 1400px) {
+
+  #header p {
+    font-size: 1.5em !important;
+  }
+  #main::before {
+  // display: none;
+  top: 100px !important;
+}
+
+#main {
+    margin-top: -200px !important;
+
+}
+
 }

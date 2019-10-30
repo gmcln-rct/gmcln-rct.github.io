@@ -1,6 +1,7 @@
 @import url("fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic,600,600italic,700,700italic");
 body {
+  overflow-x: hidden;
   background: linear-gradient(0deg, #6d5ba2, #6d5ba2, #a15b91) no-repeat center center fixed !important;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -82,6 +83,9 @@ h2 {
 .header-text b {
   color: #05244F !important; }
 
+#header::after, #header::before {
+  display: none !important; }
+
 .resume-container {
   width: 100%;
   margin-bottom: 3em; }
@@ -161,6 +165,14 @@ header.major.last h2 {
 
 a.icon.brands {
   font-size: 2em !important; }
+
+@media screen and (max-width: 1400px) {
+  #header p {
+    font-size: 1.5em !important; }
+  #main::before {
+    top: 100px !important; }
+  #main {
+    margin-top: -200px !important; } }
 
 ul.fireflies {
   z-index: 1;
