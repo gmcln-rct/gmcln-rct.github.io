@@ -1,10 +1,40 @@
 body {
-  background-color: #05244F;
-  margin: 0;
-  overflow: hidden; }
+  background: linear-gradient(0deg, #6d5ba2, #6d5ba2, #a15b91) no-repeat center center fixed !important;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -webkit-animation: AnimationName 30s ease infinite;
+  -moz-animation: AnimationName 30s ease infinite;
+  animation: AnimationName 30s ease infinite; }
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 59% 0%; }
+  50% {
+    background-position: 42% 100%; }
+  100% {
+    background-position: 59% 0%; } }
+
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 59% 0%; }
+  50% {
+    background-position: 42% 100%; }
+  100% {
+    background-position: 59% 0%; } }
+
+@keyframes AnimationName {
+  0% {
+    background-position: 59% 0%; }
+  50% {
+    background-position: 42% 100%; }
+  100% {
+    background-position: 59% 0%; } }
 
 h1, h2 {
-  color: white !important; }
+  color: white !important;
+  z-index: 5; }
 
 h1 {
   font-size: 2em !important; }
@@ -14,27 +44,13 @@ h2 {
   margin-top: -0.5em !important; }
 
 #header {
-  background-color: black; }
+  z-index: 5; }
 
 #header h1 {
-  z-index: 2; }
+  z-index: 5; }
 
 #header-content h1 {
-  z-index: 2; }
-
-.video-container {
-  height: 100%;
-  width: auto;
-  overflow: hidden;
-  position: relative; }
-
-video {
-  position: fixed;
-  min-width: 100%;
-  min-height: 100%;
-  top: 0;
-  left: 0;
-  z-index: -1; }
+  z-index: 5; }
 
 #headshot {
   width: 300px;
@@ -43,14 +59,14 @@ video {
   margin-top: 3em;
   padding: 10px;
   border: 1px solid rgba(255, 255, 255, 0.5);
-  z-index: 2; }
+  z-index: 5; }
 
 .header-text {
   width: 700px;
   height: auto;
   max-width: 90%;
   margin: 0 auto;
-  padding: 20px 40px;
+  padding: 30px 40px;
   font-size: 0.8em;
   font-weight: 400;
   letter-spacing: 0.05em;
@@ -58,8 +74,7 @@ video {
   text-align: left;
   color: #05244F;
   background-color: white;
-  opacity: 0.8;
-  border-radius: 5px;
+  border-radius: 20px;
   z-index: 2; }
 
 .header-text b {
@@ -84,12 +99,14 @@ a.resume-button {
   cursor: pointer; }
 
 header.major {
-  opacity: 0.9; }
+  border-radius: 20px;
+  text-decoration: none; }
 
 header.major p {
   margin: 0 !important;
   padding: 1em !important;
-  font-size: 1.4em !important; }
+  font-size: 1.4em !important;
+  text-transform: none !important; }
 
 .skills-languages {
   display: flex;
@@ -98,10 +115,11 @@ header.major p {
   flex-grow: 1;
   width: 700px;
   max-width: 80%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  border-radius: 10px; }
 
 .skills-languages li {
-  margin: 20px;
+  margin: 20px !important;
   font-weight: 700;
   text-align: center; }
 
@@ -113,7 +131,8 @@ header.major p {
   height: auto; }
 
 .project-container {
-  margin-bottom: 100px; }
+  margin-bottom: 200px;
+  padding-bottom: 50px; }
 
 .project-container h2 {
   margin-top: 30px !important;
@@ -130,75 +149,7 @@ header.major p {
   filter: brightness(0.8) blur(1px); }
 
 #footer {
-  background-color: #05244F !important; }
+  background-color: #342857 !important; }
 
 a.icon.brands {
   font-size: 2em !important; }
-
-ul.fireflies {
-  list-style: none; }
-
-li {
-  width: 21px;
-  top: -20px;
-  height: 21px;
-  position: absolute;
-  background-color: #FFBF00;
-  border-radius: 10px;
-  box-shadow: 0 0 40px 20px #fff, 0 0 100px 50px #0ff;
-  animation: leftright 24s infinite cubic-bezier(0.39, 0, 0.63, 1), updown 8s infinite 1.25s cubic-bezier(0.39, 0, 0.63, 1); }
-
-li:nth-of-type(2) {
-  width: 10px;
-  height: 10px;
-  border-radius: 10px;
-  animation-delay: 4s;
-  animation-duration: 27s, 8s;
-  animation-fill-mode: backwards, backwards; }
-
-li:nth-of-type(3) {
-  animation-delay: 1.5s;
-  animation-duration: 24s, 18s;
-  animation-fill-mode: backwards, backwards; }
-
-li:nth-of-type(4) {
-  animation-delay: 5.5s;
-  animation-duration: 30s, 13s; }
-
-li:nth-of-type(5) {
-  animation-fill-mode: backwards, backwards;
-  animation-duration: 32s, 15s; }
-
-li:nth-of-type(6) {
-  animation-fill-mode: backwards, backwards;
-  animation-duration: 42s, 15s; }
-
-@keyframes leftright {
-  0%, 100% {
-    left: 20%; }
-  16.666% {
-    left: 90%; }
-  33.333% {
-    left: 10%; }
-  50% {
-    left: 50%; }
-  66.666% {
-    left: 70%; }
-  83.333% {
-    left: 40%; } }
-
-@keyframes updown {
-  0%, 100% {
-    top: 0px;
-    width: 20px;
-    height: 20px; }
-  25% {
-    top: 70%; }
-  50% {
-    top: 50%;
-    width: 30px;
-    height: 30px; }
-  75% {
-    top: 70%;
-    width: 10px;
-    height: 10px; } }

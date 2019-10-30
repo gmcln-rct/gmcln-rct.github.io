@@ -1,0 +1,172 @@
+// FIREFLY 
+
+
+
+ul.fireflies{list-style:none}
+
+ul.fireflies li{
+    position:absolute;
+    top:-20px;
+    width: 0.1px;
+    height: 0.1px;
+
+//   background-color: rgba(255,231,158,0.9);
+    background: radial-gradient(rgba(255,231,158,0.9), rgba(255,231,255,1));
+    border-radius: 50%;
+    box-shadow: 0 0 40px 20px rgba(255,255,255,05.5s), 0 0 100px 50px rgba(255,231,158,0.5);
+
+    opacity: 0.8;
+    // transition: box-shadow 4s ease-out;
+    
+    z-index: 1;
+	animation: 
+		leftright 54s infinite cubic-bezier(.39,.0,.63,1),
+        updown 40s infinite 1.25s cubic-bezier(.39,.0,.63,1)
+}
+
+ul.fireflies li:nth-of-type(0){
+    width: 0.5px;
+    height: 0.5px;
+    border-radius: 50%;
+
+    -webkit-animation-delay: 4s;
+    -moz-animation-delay: 4s;
+    -ms-animation-delay: 4s;
+    animation-delay: 4s;
+
+    -webkit-animation-duration: 27s, 18s;
+    -moz-animation-duration: 27s, 18s;
+    -ms-animation-duration: 27s, 18s;
+    animation-duration: 27s, 18s;
+
+    -webkit-animation-fill-mode: backwards, backwards;
+    -moz-animation-fill-mode: backwards, backwards;
+    -ms-animation-fill-mode: backwards, backwards;
+    animation-fill-mode: backwards, backwards;
+}
+
+ul.fireflies li:nth-of-type(1){
+    width: 0.3px;
+    height: 0.3px;
+    border-radius: 50%;
+
+    -webkit-animation-delay:  7s;
+    -moz-animation-delay:  7s;
+    -ms-animation-delay:  7s;
+    animation-delay:  7s;
+
+    -webkit-animation-duration: 30s, 24s;
+    -moz-animation-duration: 30s, 24s;
+    -ms-animation-duration: 30s, 24s;
+    animation-duration: 30s, 24s;
+
+    -webkit-animation-fill-mode: backwards, backwards;
+    -moz-animation-fill-mode: backwards, backwards;
+    -ms-animation-fill-mode: backwards, backwards;
+    animation-fill-mode: backwards, backwards;
+}
+
+ul.fireflies li:nth-of-type(2){
+    width: 0.67px;
+    height: 0.67px;
+    border-radius: 50%;
+
+    -webkit-animation-delay:  7s;
+    -moz-animation-delay:  7s;
+    -ms-animation-delay:  7s;
+    animation-delay:  7s;
+
+    -webkit-animation-duration: 35s, 28s;
+    -moz-animation-duration: 35s, 28s;
+    -ms-animation-duration: 35s, 28s;
+    animation-duration: 35s, 28s;
+
+    -webkit-animation-fill-mode: backwards, backwards;
+    -moz-animation-fill-mode: backwards, backwards;
+    -ms-animation-fill-mode: backwards, backwards;
+    animation-fill-mode: backwards, backwards;
+}
+
+li:nth-of-type(3){
+    width: 0.98px;
+    height: 0.98px;
+    border-radius: 50%;
+
+    -webkit-animation-delay:  8s;
+    -moz-animation-delay:  8s;
+    -ms-animation-delay:  8s;
+    animation-delay:  8s;
+
+    -webkit-animation-duration: 40s, 32s;
+    -moz-animation-duration: 40s, 32s;
+    -ms-animation-duration: 40s, 32s;
+    animation-duration: 40s, 32s;
+
+    -webkit-animation-fill-mode: backwards, backwards;
+    -moz-animation-fill-mode: backwards, backwards;
+    -ms-animation-fill-mode: backwards, backwards;
+    animation-fill-mode: backwards, backwards;
+}
+ul.fireflies li:nth-of-type(4){
+    width: 0.89px;
+    height: 0.89px;
+    border-radius: 50%;
+
+    -webkit-animation-delay:  9s;
+    -moz-animation-delay:  9s;
+    -ms-animation-delay:  9s;
+    animation-delay:  9s;
+
+    -webkit-animation-duration: 45s, 36s;
+    -moz-animation-duration: 45s, 36s;
+    -ms-animation-duration: 45s, 36s;
+    animation-duration: 45s, 36s;
+
+    -webkit-animation-fill-mode: backwards, backwards;
+    -moz-animation-fill-mode: backwards, backwards;
+    -ms-animation-fill-mode: backwards, backwards;
+    animation-fill-mode: backwards, backwards;
+}
+
+ul.fireflies li:nth-of-type(5){
+    width: 0.27px;
+    height: 0.27px;
+    border-radius: 50%;
+
+    -webkit-animation-delay:  15s;
+    -moz-animation-delay:  15s;
+    -ms-animation-delay:  15s;
+    animation-delay:  15s;
+
+    -webkit-animation-duration: 50s, 40s;
+    -moz-animation-duration: 50s, 40s;
+    -ms-animation-duration: 50s, 40s;
+    animation-duration: 50s, 40s;
+
+    -webkit-animation-fill-mode: backwards, backwards;
+    -moz-animation-fill-mode: backwards, backwards;
+    -ms-animation-fill-mode: backwards, backwards;
+    animation-fill-mode: backwards, backwards;
+}
+
+// MOVE FIREFLIES
+@keyframes leftright {
+  0%, 100%{left:20%;}
+	16.666%	{left:90%;}
+	33.333% {left:10%;}
+	50%			{left:50%;}
+  66.666%	{left:70%;}
+	83.333% {left:40%;}
+}
+
+@keyframes updown {
+  0%, 100%{
+      top: 0px; 
+      width: 4px;
+      height: 4px}
+  25%{top:70%; }
+    50%{top: 50%;
+        width: 5px;
+        height: 5px}
+    75%{top:70%;width:10px;height:10px }
+}
