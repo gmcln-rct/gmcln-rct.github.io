@@ -31,10 +31,7 @@ ul.fireflies li:nth-of-type(0){
     height: 0.5px;
     border-radius: 50%;
 
-    -webkit-animation-delay: 2s;
-    -moz-animation-delay: 2s;
-    -ms-animation-delay: 2s;
-    animation-delay: 2s;
+
 
     -webkit-animation-duration: 27s, 18s;
     -moz-animation-duration: 27s, 18s;
@@ -52,10 +49,10 @@ ul.fireflies li:nth-of-type(1){
     height: 0.3px;
     border-radius: 50%;
 
-    -webkit-animation-delay:  4s;
-    -moz-animation-delay:  4s;
-    -ms-animation-delay:  4s;
-    animation-delay:  4s;
+    -webkit-animation-delay:  2s;
+    -moz-animation-delay:  2s;
+    -ms-animation-delay:  2s;
+    animation-delay:  2s;
 
     -webkit-animation-duration: 30s, 22s;
     -moz-animation-duration: 30s, 22s;
@@ -216,8 +213,11 @@ ul.fireflies li:nth-of-type(8){
 
 // MOVE FIREFLIES
 @keyframes leftright {
-  0%, 100%{left:20%;}
-	16.666%	{left:90%;}
+  0%, 100%{
+      left: 20%;
+    }
+	16.666%	{
+        left: 90%;}
 	33.333% {left:10%;}
 	50%			{left:50%;}
   66.666%	{left:70%;}
