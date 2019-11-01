@@ -45,7 +45,7 @@ h2 {
   margin-top: -0.5em !important; }
 
 #header {
-  z-index: 5; }
+  z-index: 10; }
 
 #header h1 {
   z-index: 5; }
@@ -53,14 +53,15 @@ h2 {
 #header-content h1 {
   z-index: 5; }
 
-#headshot {
+img#headshot {
   width: 300px;
   height: auto;
   max-width: 80%;
-  margin-top: 3em;
+  margin-top: 2em;
   padding: 10px;
   border: 1px solid rgba(255, 255, 255, 0.5);
-  z-index: 5; }
+  opacity: 1 !important;
+  z-index: 10; }
 
 .header-text {
   width: 700px;

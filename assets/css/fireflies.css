@@ -9,18 +9,21 @@ ul.fireflies li {
   height: 0.1px;
   background: radial-gradient(rgba(255, 231, 158, 0.9), #ffe7ff);
   border-radius: 50%;
-  box-shadow: 0 0 40px 20px white, 0 0 100px 50px rgba(255, 231, 158, 0.5);
+  box-shadow: 0 0 40px 20px #ffe79e, 0 0 100px 50px rgba(255, 231, 158, 0.5);
   opacity: 0.8;
+  animation: pulse 3s infinite;
+  -webkit-animation: pulse 3s infinite;
+  z-index: 1;
   animation: leftright 52s infinite cubic-bezier(0.39, 0, 0.63, 1), updown 40s infinite 1.25s cubic-bezier(0.39, 0, 0.63, 1); }
+
+#image-pulse {
+  animation: pulse 3s infinite;
+  -webkit-animation: pulse 3s infinite; }
 
 ul.fireflies li:nth-of-type(0) {
   width: 0.5px;
   height: 0.5px;
   border-radius: 50%;
-  -webkit-animation-delay: 2s;
-  -moz-animation-delay: 2s;
-  -ms-animation-delay: 2s;
-  animation-delay: 2s;
   -webkit-animation-duration: 27s, 18s;
   -moz-animation-duration: 27s, 18s;
   -ms-animation-duration: 27s, 18s;
@@ -34,10 +37,10 @@ ul.fireflies li:nth-of-type(1) {
   width: 0.3px;
   height: 0.3px;
   border-radius: 50%;
-  -webkit-animation-delay: 4s;
-  -moz-animation-delay: 4s;
-  -ms-animation-delay: 4s;
-  animation-delay: 4s;
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay: 2s;
+  -ms-animation-delay: 2s;
+  animation-delay: 2s;
   -webkit-animation-duration: 30s, 22s;
   -moz-animation-duration: 30s, 22s;
   -ms-animation-duration: 30s, 22s;
@@ -182,7 +185,7 @@ ul.fireflies li:nth-of-type(8) {
 
 @keyframes updown {
   0%, 100% {
-    top: -100px;
+    top: -50px;
     width: 4px;
     height: 4px; }
   25% {
@@ -195,3 +198,24 @@ ul.fireflies li:nth-of-type(8) {
     top: 95%;
     width: 10px;
     height: 10px; } }
+
+/* pulse */
+@keyframes pulse {
+  0% {
+    box-shadow: 0px 0px 5px #ffe79e; }
+  15% {
+    box-shadow: 0px 0px 30px #ffe79e; }
+  30% {
+    box-shadow: 0px 0px 5px #ffe79e; }
+  100% {
+    box-shadow: 0px 0px 5px #ffe79e; } }
+
+@-webkit-keyframes pulse {
+  0% {
+    box-shadow: 0px 0px 5px #ffe79e; }
+  15% {
+    box-shadow: 0px 0px 30px #ffe79e; }
+  30% {
+    box-shadow: 0px 0px 5px #ffe79e; }
+  100% {
+    box-shadow: 0px 0px 5px #ffe79e; } }
