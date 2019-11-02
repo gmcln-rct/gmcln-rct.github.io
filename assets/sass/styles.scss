@@ -152,6 +152,13 @@ header.major p {
 
 // SKILLS SECTION
 
+.skills-title {
+  margin: 0 auto;
+  font-size: 2em !important;
+  text-align: center;
+  color: red !important;
+}
+
   ul.skills-languages {
     display: flex !important;
     justify-content: space-evenly;
@@ -163,7 +170,7 @@ header.major p {
     max-width: 80%;
     margin: 0 auto;
 
-    border-radius: 10px;
+    border-radius: 10px !important;
   }
 
   ul.skills-languages li {
@@ -205,7 +212,14 @@ header.major p {
 
   .feature.left, .feature.right {
       background-color: white;
+
   }
+  
+    .feature.left .image:hover,   .feature.right .image:hover {
+      -webkit-filter: brightness(1.2) saturate(0.8);
+      filter: brightness(1.2) saturate(0.8);
+  }
+
 
   .feature.left .image:hover,   .feature.right .image:hover {
       -webkit-filter: brightness(1.2) hue-rotate(80deg);
