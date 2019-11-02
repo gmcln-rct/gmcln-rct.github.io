@@ -5,11 +5,11 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  -webkit-animation: AnimationName 30s ease infinite;
-  -moz-animation: AnimationName 30s ease infinite;
-  animation: AnimationName 30s ease infinite; }
+  -webkit-animation: bgGradientAnimation 30s ease infinite;
+  -moz-animation: bgGradientAnimation 30s ease infinite;
+  animation: bgGradientAnimation 30s ease infinite; }
 
-@-webkit-keyframes AnimationName {
+@-webkit-keyframes bgGradientAnimation {
   0% {
     background-position: 59% 0%; }
   50% {
@@ -17,7 +17,7 @@ body {
   100% {
     background-position: 59% 0%; } }
 
-@-moz-keyframes AnimationName {
+@-moz-keyframes bgGradientAnimation {
   0% {
     background-position: 59% 0%; }
   50% {
@@ -25,7 +25,7 @@ body {
   100% {
     background-position: 59% 0%; } }
 
-@keyframes AnimationName {
+@keyframes bgGradientAnimation {
   0% {
     background-position: 59% 0%; }
   50% {
@@ -44,29 +44,29 @@ h2 {
   font-size: 1.3em !important;
   margin-top: -0.5em !important; }
 
-#header {
-  z-index: 10; }
+#header, #main {
+  z-index: 10 !important; }
 
-#header h1 {
-  z-index: 5; }
+#header:after, #header:before {
+  z-index: 10 !important; }
 
-#header-content h1 {
-  z-index: 5; }
+#header-content {
+  width: 100%; }
 
 img#headshot {
   width: 300px;
   height: auto;
   max-width: 80%;
-  margin-top: 2em;
+  margin-top: 1em;
   padding: 10px;
   border: 1px solid rgba(255, 255, 255, 0.5);
   opacity: 1 !important;
-  z-index: 10; }
+  z-index: 20 !important; }
 
 .header-text {
   width: 700px;
+  max-width: 100%;
   height: auto;
-  max-width: 90%;
   margin: 0 auto;
   padding: 30px 40px;
   font-size: 0.8em;
@@ -77,7 +77,7 @@ img#headshot {
   color: #05244F;
   background-color: white;
   border-radius: 20px;
-  z-index: 2; }
+  z-index: 10 !important; }
 
 .header-text b {
   color: #05244F !important; }
@@ -113,6 +113,19 @@ header.major p {
   font-size: 1.4em !important;
   text-transform: none !important; }
 
+.skills {
+  border-radius: 10px; }
+
+div#skills-title {
+  margin: 0 auto;
+  padding-bottom: 15px;
+  font-size: 2em;
+  font-weight: 700;
+  letter-spacing: 0.075em;
+  text-align: center;
+  color: #5b5b5b;
+  z-index: 10; }
+
 ul.skills-languages {
   display: flex !important;
   justify-content: space-evenly;
@@ -121,7 +134,7 @@ ul.skills-languages {
   width: 700px;
   max-width: 80%;
   margin: 0 auto;
-  border-radius: 10px; }
+  border-radius: 10px !important; }
 
 ul.skills-languages li {
   margin: 20px !important;
@@ -150,8 +163,9 @@ ul.skills-languages svg {
   background-color: white; }
 
 .feature.left .image:hover, .feature.right .image:hover {
-  -webkit-filter: brightness(1.2) hue-rotate(80deg);
-  filter: brightness(1.2) hue-rotate(80deg); }
+  -webkit-filter: brightness(1.2) saturate(0.8);
+  filter: brightness(1.2) saturate(0.8);
+  transition: 0.5s; }
 
 #footer {
   background-color: #342857 !important; }
