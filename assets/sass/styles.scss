@@ -9,21 +9,21 @@ body {
   -o-background-size: cover;
   background-size: cover;
 
-  -webkit-animation: AnimationName 30s ease infinite;
-  -moz-animation: AnimationName 30s ease infinite;
-  animation: AnimationName 30s ease infinite;
+  -webkit-animation: bgGradientAnimation 30s ease infinite;
+  -moz-animation: bgGradientAnimation 30s ease infinite;
+  animation: bgGradientAnimation 30s ease infinite;
 
-    @-webkit-keyframes AnimationName {
+    @-webkit-keyframes bgGradientAnimation {
         0%{background-position:59% 0%}
         50%{background-position:42% 100%}
         100%{background-position:59% 0%}
     }
-    @-moz-keyframes AnimationName {
+    @-moz-keyframes bgGradientAnimation {
         0%{background-position:59% 0%}
         50%{background-position:42% 100%}
         100%{background-position:59% 0%}
     }
-    @keyframes AnimationName {
+    @keyframes bgGradientAnimation {
         0%{background-position:59% 0%}
         50%{background-position:42% 100%}
         100%{background-position:59% 0%}
@@ -45,16 +45,22 @@ h2 {
 
 }
 
-#header {
-    z-index: 10;
+#header, #main {
+    z-index: 10 !important;
 }
+
+#header:after, #header:before {
+    z-index: 10 !important;
+}
+
+
 #header h1 {
   // margin-bottom: 0;
-  z-index: 5;
+  // z-index: 5;
 }
 
 #header-content h1 {
-  z-index: 5;
+  // z-index: 5;
 }
 
 
@@ -63,20 +69,20 @@ img#headshot {
   height: auto;
   max-width: 80%;
 
-  margin-top: 2em;
+  margin-top: 1em;
   padding: 10px;
 
   border: 1px solid rgba(255,255,255,0.5);
 
   opacity: 1 !important;
-  z-index: 10 !important;
+  z-index: 20 !important;
 }
 
 
 .header-text {
   width: 700px;
-  height: auto;
   max-width: 90%;
+  height: auto;
 
   margin: 0 auto;
   padding: 30px 40px;
@@ -93,7 +99,7 @@ img#headshot {
 
   border-radius: 20px;
 
-  z-index: 2;
+  z-index: 10 !important;
 }
 
 .header-text b {

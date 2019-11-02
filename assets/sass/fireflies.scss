@@ -2,13 +2,15 @@
 
 
 ul.fireflies {
-    z-index: 1;
-    list-style:none
+    // z-index: 1;
+    list-style:none;
+        top: -100px;
+    left: -30px;
 }
 
 ul.fireflies li{
     position:absolute;
-    top: -50px;
+    top: -100px;
     left: -30px;
     width: 0.1px;
     height: 0.1px;
@@ -19,7 +21,7 @@ ul.fireflies li{
 
     opacity: 0.8;
 
-    z-index: 1;
+    z-index: 0;
 	animation: 
 		leftright 52s infinite cubic-bezier(.39,.0,.63,1),
         updown 40s infinite 1.25s cubic-bezier(.39,.0,.63,1)
@@ -236,7 +238,7 @@ ul.fireflies li:nth-of-type(8){
 
 @keyframes updown {
     0% {
-        top: -50px; 
+        top: -100px; 
         width: 4px;
         height: 4px
         }
