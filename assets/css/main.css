@@ -161,12 +161,20 @@ ul.skills-languages svg {
   background-color: rgba(5, 36, 79, 0.5) !important;
   font-size: 2em !important; }
 
+.feature.left .image img {
+  width: 95%;
+  height: auto; }
+
+.feature.right .image img {
+  width: 95%;
+  height: auto; }
+
 .feature.left, .feature.right {
   background-color: white; }
 
 .feature.left .image:hover, .feature.right .image:hover {
-  -webkit-filter: brightness(1.2) saturate(0.8);
-  filter: brightness(1.2) saturate(0.8);
+  -webkit-filter: brightness(1.3) saturate(0.8);
+  filter: brightness(1.3) saturate(0.8);
   transition: 0.5s; }
 
 #footer {
@@ -2010,7 +2018,6 @@ input[type="button"],
     .feature.left .image {
       float: left; }
       .feature.left .image img {
-        right: 0;
         top: 0; }
     .feature.left .content {
       padding-right: 0; }
