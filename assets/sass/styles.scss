@@ -44,7 +44,7 @@ h1, h2 {
   // z-index: 50 !important;
 }
 h1 {
-    font-size: 2.2em !important;
+    font-size: 2.4em !important;
 }
 h2 {
     font-size: 1.4em !important;
@@ -67,7 +67,7 @@ h2 {
 #header h2 {
   // margin-bottom: 0;
   // z-index: 5;
-  color: rgb(231, 212, 236) !important;
+  color: rgba(255,231,158,0.9) !important;
 }
 
 #header-content  {
@@ -100,7 +100,7 @@ img#headshot {
   margin: 0 auto;
   padding: 30px 40px;
 
-  font-size: 0.9em;
+  font-size: 1.1em;
   font-weight: 400;
   letter-spacing: 0.05em;
   line-height: 1em;
@@ -162,10 +162,10 @@ header.major {
 
 header.major p {
   margin: 0 !important;
-  padding: 1em !important;
+  padding: 2em !important;
 
   font-size: 1.4em !important;
-    text-transform: none !important;
+  text-transform: none !important;
 
 }
 
