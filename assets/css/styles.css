@@ -33,22 +33,27 @@ body {
   100% {
     background-position: 59% 0%; } }
 
+#main {
+  margin-top: -200px !important; }
+
+#main::before {
+  top: 200px !important; }
+
 h1, h2 {
-  color: white !important;
-  z-index: 50 !important; }
+  color: white !important; }
 
 h1 {
-  font-size: 2em !important; }
+  font-size: 2.2em !important; }
 
 h2 {
-  font-size: 1.3em !important;
+  font-size: 1.4em !important;
   margin-top: -0.5em !important; }
 
-#header, #main {
-  z-index: 50 !important; }
+#header {
+  padding-top: 4em !important; }
 
-#header:after, #header:before {
-  z-index: 50 !important; }
+#header h2 {
+  color: #e7d4ec !important; }
 
 #header-content {
   width: 100%; }
@@ -60,7 +65,7 @@ img#headshot {
   margin-top: 1em;
   padding: 10px;
   border: 1px solid rgba(255, 255, 255, 0.5);
-  opacity: 1 !important;
+  opacity: 100% !important;
   z-index: 50 !important; }
 
 .header-text {
@@ -69,7 +74,7 @@ img#headshot {
   height: auto;
   margin: 0 auto;
   padding: 30px 40px;
-  font-size: 0.8em;
+  font-size: 0.9em;
   font-weight: 400;
   letter-spacing: 0.05em;
   line-height: 1em;
@@ -156,7 +161,7 @@ ul.skills-languages svg {
   margin-top: 30px !important;
   margin-bottom: 0px !important;
   padding: 10px;
-  background-color: rgba(5, 36, 79, 0.5) !important;
+  background-color: #552C7A !important;
   font-size: 2em !important; }
 
 .feature.left .image img {
@@ -189,8 +194,4 @@ a.icon.brands {
 
 @media screen and (max-width: 1600px) {
   #header p {
-    font-size: 1.5em !important; }
-  #main::before {
-    top: 150px !important; }
-  #main {
-    margin-top: -200px !important; } }
+    font-size: 1.5em !important; } }

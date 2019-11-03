@@ -15,10 +15,13 @@ ul.fireflies li{
     left: -30px;
     width: 0.1px;
     height: 0.1px;
+    background: white;
+        // background: radial-gradient(rgba(255,231,158,1), rgba(255,231,255,1));
 
-    background: radial-gradient(rgba(255,231,158,0.5), rgba(255,231,255,1));
+
     border-radius: 50%;
-    box-shadow: 0 0 40px 20px rgba(255,231,158,1), inset 0 0 100px 50px rgba(255,231,158,1);
+    box-shadow: 0 0 40px 20px rgba(255,231,158,0.7);
+    // box-shadow: inset 0 0 100px 50px rgba(255,231,158,1);
 
     opacity: 0.8;
 
@@ -38,7 +41,6 @@ ul.fireflies li{
 ul.fireflies li:nth-of-type(0){
     width: 0.5px;
     height: 0.5px;
-    border-radius: 50%;
 
     -webkit-animation-duration: 27s, 18s;
     -moz-animation-duration: 27s, 18s;
@@ -54,7 +56,6 @@ ul.fireflies li:nth-of-type(0){
 ul.fireflies li:nth-of-type(1){
     width: 0.3px;
     height: 0.3px;
-    border-radius: 50%;
 
     -webkit-animation-delay:  1s;
     -moz-animation-delay:  1s;
@@ -75,7 +76,6 @@ ul.fireflies li:nth-of-type(1){
 ul.fireflies li:nth-of-type(2){
     width: 0.67px;
     height: 0.67px;
-    border-radius: 50%;
 
     -webkit-animation-delay:  7s;
     -moz-animation-delay:  7s;
@@ -96,7 +96,6 @@ ul.fireflies li:nth-of-type(2){
 ul.fireflies li:nth-of-type(3){
     width: 0.98px;
     height: 0.98px;
-    border-radius: 50%;
 
     -webkit-animation-delay:  8s;
     -moz-animation-delay:  8s;
@@ -116,7 +115,6 @@ ul.fireflies li:nth-of-type(3){
 ul.fireflies li:nth-of-type(4){
     width: 0.89px;
     height: 0.89px;
-    border-radius: 50%;
 
     -webkit-animation-delay:  9s;
     -moz-animation-delay:  9s;
@@ -137,7 +135,6 @@ ul.fireflies li:nth-of-type(4){
 ul.fireflies li:nth-of-type(5){
     width: 0.27px;
     height: 0.27px;
-    border-radius: 50%;
 
     -webkit-animation-delay:  15s;
     -moz-animation-delay:  15s;
@@ -158,7 +155,6 @@ ul.fireflies li:nth-of-type(5){
 ul.fireflies li:nth-of-type(6){
     width: 0.95px;
     height: 0.95px;
-    border-radius: 50%;
 
     -webkit-animation-delay:  11s;
     -moz-animation-delay:  11s;
@@ -179,7 +175,6 @@ ul.fireflies li:nth-of-type(6){
 ul.fireflies li:nth-of-type(7){
     width: 0.06px;
     height: 0.06px;
-    border-radius: 50%;
 
     -webkit-animation-delay:  20s;
     -moz-animation-delay:  20s;
@@ -200,7 +195,6 @@ ul.fireflies li:nth-of-type(7){
 ul.fireflies li:nth-of-type(8){
     width: 0.85px;
     height: 0.85px;
-    border-radius: 50%;
 
     -webkit-animation-delay:  13s;
     -moz-animation-delay:  13s;
@@ -265,36 +259,45 @@ ul.fireflies li:nth-of-type(8){
 
 /* pulse */
 @keyframes pulse {
-0% { box-shadow: 0px 0px 5px rgba( 255,231,158,1) }
-15% { box-shadow: 0px 0px 30px rgba( 255,231,158,1) }
-30% { box-shadow: 0px 0px 5px rgba( 255,231,158,1) }
-100% { box-shadow: 0px 0px 5px rgba( 255,231,158,1)  }
+    0% { box-shadow: 0px 0px 5px rgba( 255,231,158,1) }
+    15% { box-shadow: 0px 0px 30px rgba( 255,231,158,1) }
+    30% { box-shadow: 0px 0px 5px rgba( 255,231,158,1) }
+    100% { box-shadow: 0px 0px 5px rgba( 255,231,158,1)  }
 }
 @-webkit-keyframes pulse {
-0% { box-shadow: 0px 0px 5px rgba( 255,231,158,1)}
-15% { box-shadow: 0px 0px 30px rgba( 255,231,158,1)}
-30% { box-shadow: 0px 0px 5px rgba( 255,231,158,1)  }
-100% { box-shadow: 0px 0px 5px rgba( 255,231,158,1)  }
+    0% { box-shadow: 0px 0px 5px rgba( 255,231,158,1)}
+    15% { box-shadow: 0px 0px 30px rgba( 255,231,158,1)}
+    30% { box-shadow: 0px 0px 5px rgba( 255,231,158,1)  }
+    100% { box-shadow: 0px 0px 5px rgba( 255,231,158,1)  }
 }
 
 
-FLICKR
+// BLINK
     
-.image-flicker {
-animation: white-flicker .3s infinite;
--webkit-animation: white-flicker .3s infinite;
-background: rgba(0,0,0,.5);
+
+.blink {
+  animation: blink 5s steps(5, start) infinite;
+  -moz-animation: blink 1s steps(5, start) infinite;
+  -o-animation: blink 1s steps(5, start) infinite;
+  -webkit-animation: blink 1s steps(5, start) infinite;
 }
 
-
-/* white-flicker */
-@keyframes white-flicker {
-0% { box-shadow: 0px 0px 24px rgba( 255,255,255,1) }
-50% { box-shadow: 0px 0px 28px rgba( 255,255,180,1) }
-100% { box-shadow: 0px 0px 24px rgba( 255,255,255,1) }
-}
-@-webkit-keyframes white-flicker {
-0% { box-shadow: 0px 0px 24px rgba( 255,255,255,1) }
-50% { box-shadow: 0px 0px 28px rgba( 255,255,180,1) }
-100% { box-shadow: 0px 0px 24px rgba( 255,255,255,1) }
+@keyframes blink {
+	20% {
+        opacity: .99;
+        transition: transform 200ms linear;
+    }
+    	50% {
+        opacity: .8;
+        transition: transform 100ms linear;
+    }
+    
+	65% {
+        opacity: 0.6;
+    transition: transform 100ms linear;
+	}
+    100% {
+        opacity: .99;
+        transition: transform 300ms linear;
+    }
 }

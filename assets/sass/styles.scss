@@ -31,32 +31,43 @@ body {
 
 }
 
+#main {
+    margin-top: -200px !important;
+
+}
+#main::before {
+  top: 200px !important;
+}
+
 h1, h2 {
   color: white !important;
-  z-index: 50 !important;
+  // z-index: 50 !important;
 }
 h1 {
-    font-size: 2em !important;
+    font-size: 2.2em !important;
 }
 h2 {
-    font-size: 1.3em !important;
+    font-size: 1.4em !important;
     margin-top: -0.5em !important;
     // margin-bottom: .3em !important;
 
 }
-
-#header, #main {
-    z-index: 50 !important;
+#header {
+  padding-top: 4em !important;
 }
+// #header, #main {
+//     z-index: 50 !important;
+// }
 
-#header:after, #header:before {
-    z-index: 50 !important;
-}
+// #header:after, #header:before {
+//     z-index: 50 !important;
+// }
 
 
-#header h1 {
+#header h2 {
   // margin-bottom: 0;
   // z-index: 5;
+  color: rgb(231, 212, 236) !important;
 }
 
 #header-content  {
@@ -76,7 +87,7 @@ img#headshot {
 
   border: 1px solid rgba(255,255,255,0.5);
 
-  opacity: 1 !important;
+  opacity: 100% !important;
   z-index: 50 !important;
 }
 
@@ -89,7 +100,7 @@ img#headshot {
   margin: 0 auto;
   padding: 30px 40px;
 
-  font-size: 0.8em;
+  font-size: 0.9em;
   font-weight: 400;
   letter-spacing: 0.05em;
   line-height: 1em;
@@ -209,8 +220,6 @@ ul.skills-languages svg {
 // PROJECTS
 
 .project-container {
-  // padding: 20px;
-  // background-color: rgba(0,0,0,0.5);
   margin-bottom: 200px;
   padding-bottom: 50px;
 
@@ -221,7 +230,7 @@ ul.skills-languages svg {
   margin-bottom: 0px !important;
   padding: 10px;
 
-  background-color: rgba(5,36,79,0.5) !important;
+  background-color: #552C7A !important;
 
   font-size: 2em !important;
 }
@@ -271,6 +280,8 @@ a.icon.brands {
   font-size: 2em !important;
 }
 
+
+// ------------------------------------------------------------------
 // MEDIA QUERIES
 
 @media screen and (max-width: 1600px) {
@@ -278,14 +289,4 @@ a.icon.brands {
     #header p {
       font-size: 1.5em !important;
     }
-    #main::before {
-    // display: none;
-    top: 150px !important;
-  }
-
-  #main {
-      margin-top: -200px !important;
-
-  }
-
 }
