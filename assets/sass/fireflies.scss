@@ -6,6 +6,7 @@ ul.fireflies {
     list-style:none;
         top: -100px;
     left: -30px;
+    z-index: 0 !important;
 }
 
 ul.fireflies li{

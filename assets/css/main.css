@@ -37,7 +37,7 @@ body {
 
 h1, h2 {
   color: white !important;
-  z-index: 5; }
+  z-index: 50 !important; }
 
 h1 {
   font-size: 2em !important; }
@@ -47,10 +47,10 @@ h2 {
   margin-top: -0.5em !important; }
 
 #header, #main {
-  z-index: 10 !important; }
+  z-index: 50 !important; }
 
 #header:after, #header:before {
-  z-index: 10 !important; }
+  z-index: 50 !important; }
 
 #header-content {
   width: 100%; }
@@ -63,7 +63,7 @@ img#headshot {
   padding: 10px;
   border: 1px solid rgba(255, 255, 255, 0.5);
   opacity: 1 !important;
-  z-index: 20 !important; }
+  z-index: 50 !important; }
 
 .header-text {
   width: 700px;
@@ -79,7 +79,7 @@ img#headshot {
   color: #05244F;
   background-color: white;
   border-radius: 20px;
-  z-index: 10 !important; }
+  z-index: 50 !important; }
 
 .header-text b {
   color: #05244F !important; }
@@ -178,7 +178,7 @@ ul.skills-languages svg {
   transition: 0.5s; }
 
 #footer {
-  background-color: #342857 !important; }
+  background-color: #572963 !important; }
 
 #footer a {
   font-size: 2em; }
@@ -200,7 +200,8 @@ a.icon.brands {
 ul.fireflies {
   list-style: none;
   top: -100px;
-  left: -30px; }
+  left: -30px;
+  z-index: 0 !important; }
 
 ul.fireflies li {
   position: absolute;
