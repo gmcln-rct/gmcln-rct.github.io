@@ -57,10 +57,10 @@ ul.fireflies li:nth-of-type(1){
     width: 0.3px;
     height: 0.3px;
 
-    -webkit-animation-delay:  1s;
-    -moz-animation-delay:  1s;
-    -ms-animation-delay:  1s;
-    animation-delay:  1s;
+    -webkit-animation-delay:  0.1s;
+    -moz-animation-delay:  0.1s;
+    -ms-animation-delay:  0.1s;
+    animation-delay:  0.1s;
 
     -webkit-animation-duration: 30s, 22s;
     -moz-animation-duration: 30s, 22s;
@@ -77,10 +77,10 @@ ul.fireflies li:nth-of-type(2){
     width: 0.67px;
     height: 0.67px;
 
-    -webkit-animation-delay:  7s;
-    -moz-animation-delay:  7s;
-    -ms-animation-delay:  7s;
-    animation-delay:  7s;
+    -webkit-animation-delay:  0.7s;
+    -moz-animation-delay:  0.7s;
+    -ms-animation-delay:  0.7s;
+    animation-delay:  0.7s;
 
     -webkit-animation-duration: 35s, 28s;
     -moz-animation-duration: 35s, 28s;
@@ -116,10 +116,10 @@ ul.fireflies li:nth-of-type(4){
     width: 0.89px;
     height: 0.89px;
 
-    -webkit-animation-delay:  9s;
-    -moz-animation-delay:  9s;
-    -ms-animation-delay:  9s;
-    animation-delay:  9s;
+    -webkit-animation-delay:  3s;
+    -moz-animation-delay:  3s;
+    -ms-animation-delay:  3s;
+    animation-delay:  3s;
 
     -webkit-animation-duration: 45s, 36s;
     -moz-animation-duration: 45s, 36s;
@@ -136,10 +136,10 @@ ul.fireflies li:nth-of-type(5){
     width: 0.27px;
     height: 0.27px;
 
-    -webkit-animation-delay:  15s;
-    -moz-animation-delay:  15s;
-    -ms-animation-delay:  15s;
-    animation-delay:  15s;
+    -webkit-animation-delay:  3.5s;
+    -moz-animation-delay:  3.5s;
+    -ms-animation-delay:  3.5s;
+    animation-delay:  3.5s;
 
     -webkit-animation-duration: 50s, 40s;
     -moz-animation-duration: 50s, 40s;
@@ -210,7 +210,70 @@ ul.fireflies li:nth-of-type(8){
     -moz-animation-fill-mode: backwards, backwards;
     -ms-animation-fill-mode: backwards, backwards;
     animation-fill-mode: backwards, backwards;
-    }
+}
+
+ul.fireflies li:nth-of-type(9){
+    width: 0.56px;
+    height: 0.56px;
+    border-radius: 50%;
+
+    -webkit-animation-delay:  3s;
+    -moz-animation-delay:  3s;
+    -ms-animation-delay:  3s;
+    animation-delay:  3s;
+
+    -webkit-animation-duration: 15s, 12s;
+    -moz-animation-duration: 15s, 12s;
+    -ms-animation-duration: 15s, 12s;
+    animation-duration: 15s, 12s;
+
+    -webkit-animation-fill-mode: backwards, backwards;
+    -moz-animation-fill-mode: backwards, backwards;
+    -ms-animation-fill-mode: backwards, backwards;
+    animation-fill-mode: backwards, backwards;
+}
+
+ul.fireflies li:nth-of-type(10){
+    width: 0.43px;
+    height: 0.43px;
+    border-radius: 50%;
+
+    -webkit-animation-delay:  3.33s;
+    -moz-animation-delay:  3.33s;
+    -ms-animation-delay:  3.33s;
+    animation-delay:  3.33s;
+
+    -webkit-animation-duration: 33.3s, 13.32s;
+    -moz-animation-duration: 33.3s, 13.32s;
+    -ms-animation-duration: 33.3s, 13.32s;
+    animation-duration: 33.3s, 13.32s;
+
+    -webkit-animation-fill-mode: backwards, backwards;
+    -moz-animation-fill-mode: backwards, backwards;
+    -ms-animation-fill-mode: backwards, backwards;
+    animation-fill-mode: backwards, backwards;
+}
+
+ul.fireflies li:nth-of-type(11){
+    width: 0.83px;
+    height: 0.83px;
+    border-radius: 50%;
+
+    -webkit-animation-delay:  3.67s;
+    -moz-animation-delay:  3.67s;
+    -ms-animation-delay:  3.67s;
+    animation-delay:  3.67s;
+
+    -webkit-animation-duration: 36.7s, 14.68s;
+    -moz-animation-duration: 36.7s, 14.68s;
+    -ms-animation-duration: 36.7s, 14.68s;
+    animation-duration: 36.7s, 14.68s;
+
+    -webkit-animation-fill-mode: backwards, backwards;
+    -moz-animation-fill-mode: backwards, backwards;
+    -ms-animation-fill-mode: backwards, backwards;
+    animation-fill-mode: backwards, backwards;
+}
 
 // MOVE FIREFLIES
 @keyframes leftright {

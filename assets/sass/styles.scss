@@ -156,8 +156,16 @@ a.resume-button {
 
 header.major {
   // opacity: 0.9;
+
+  margin-top: 6em !important;
+
   border-radius: 20px;
   text-decoration: none;
+}
+
+
+header.major.last h2 {
+  font-size: 2em !important;
 }
 
 header.major p {
@@ -272,9 +280,7 @@ ul.skills-languages svg {
   font-size: 2em;
 }
 
-header.major.last h2 {
-font-size: 2em !important;
-}
+
 
 a.icon.brands {
   font-size: 2em !important;
@@ -285,6 +291,9 @@ a.icon.brands {
 // MEDIA QUERIES
 
 @media screen and (max-width: 1600px) {
+    header.major {
+      margin-top: 1em;
+    }
 
     #header p {
       font-size: 1.5em !important;
