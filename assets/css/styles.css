@@ -5,34 +5,7 @@ body {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
-  -webkit-animation: bgGradientAnimation 3s ease infinite;
-  -moz-animation: bgGradientAnimation 30s ease infinite;
-  animation: bgGradientAnimation 3s ease infinite; }
-
-@-webkit-keyframes bgGradientAnimation {
-  0% {
-    background-position: 59% 0%; }
-  50% {
-    background-position: 42% 100%; }
-  100% {
-    background-position: 59% 0%; } }
-
-@-moz-keyframes bgGradientAnimation {
-  0% {
-    background-position: 59% 0%; }
-  50% {
-    background-position: 42% 100%; }
-  100% {
-    background-position: 59% 0%; } }
-
-@keyframes bgGradientAnimation {
-  0% {
-    background-position: 59% 0%; }
-  50% {
-    background-position: 42% 100%; }
-  100% {
-    background-position: 59% 0%; } }
+  background-size: cover; }
 
 #main {
   margin-top: -200px !important; }
@@ -43,30 +16,28 @@ body {
 h1, h2 {
   color: white !important; }
 
-h1 {
-  font-size: 2.4em !important;
-  line-height: 2.4em;
-  text-decoration-line: underline overline;
-  -webkit-text-underline-position: under;
-  -ms-text-underline-position: below;
-  text-underline-position: under; }
-
-h2 {
-  font-size: 1.4em !important;
-  margin-top: -0.5em !important; }
-
 #header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding-top: 4em !important; }
 
 .header-container {
-  width: 30%;
-  border-bottom: 3px solid red !important; }
+  width: 32rem;
+  margin: 0 auto;
+  padding: 0.7rem 0;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 0.125em;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  border-top: 1.5px solid white !important;
+  border-bottom: 1.5px solid white !important; }
+
+h2 {
+  font-size: 1.4em !important; }
 
 #header h2 {
-  color: rgba(255, 231, 158, 0.9) !important; }
+  margin-top: 0.3rem;
+  color: #F0E462 !important; }
 
 #header-content {
   width: 100%; }
@@ -76,6 +47,7 @@ img#headshot {
   height: auto;
   max-width: 80%;
   margin-top: 1em;
+  margin-bottom: 0.4rem;
   padding: 10px;
   border: 1px solid rgba(255, 255, 255, 0.5);
   opacity: 100% !important;
@@ -210,4 +182,10 @@ a.icon.brands {
   header.major {
     margin-top: 1em; }
   #header p {
-    font-size: 1.5em !important; } }
+    font-size: 1.5em !important; }
+  .header-container {
+    width: 30rem;
+    max-width: 80%;
+    font-size: 2.4em;
+    border-top: 1px solid white !important;
+    border-bottom: 1px solid white !important; } }
