@@ -2,17 +2,17 @@
 // Edit here
 
 body {
-  overflow-x: hidden;
-    background: linear-gradient(0deg, #6d5ba2, #6d5ba2, #a15b91) no-repeat center center fixed !important;
-  // background-size: 600% 600%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+    overflow-x: hidden;
+    background: linear-gradient(0deg, #6d5ba2, #a15b91) no-repeat center center fixed !important;
+    background-size: 200% 200%;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+    background-size: cover;
 
-  -webkit-animation: bgGradientAnimation 30s ease infinite;
+  -webkit-animation: bgGradientAnimation 3s ease infinite;
   -moz-animation: bgGradientAnimation 30s ease infinite;
-  animation: bgGradientAnimation 30s ease infinite;
+  animation: bgGradientAnimation 3s ease infinite;
 
     @-webkit-keyframes bgGradientAnimation {
         0%{background-position:59% 0%}
@@ -29,7 +29,6 @@ body {
         50%{background-position:42% 100%}
         100%{background-position:59% 0%}
     }
-
 }
 
 #main {
@@ -45,8 +44,16 @@ h1, h2 {
   // z-index: 50 !important;
 }
 h1 {
-    font-size: 2.4em !important;
+  font-size: 2.4em !important;
+  line-height: 2.4em;
+  
+  text-decoration-line: underline overline;
+    -webkit-text-underline-position: under;
+    -ms-text-underline-position: below;
+  text-underline-position: under; 
+
 }
+
 h2 {
     font-size: 1.4em !important;
     margin-top: -0.5em !important;
@@ -54,25 +61,24 @@ h2 {
 
 }
 #header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding-top: 4em !important;
 }
-// #header, #main {
-//     z-index: 50 !important;
-// }
 
-// #header:after, #header:before {
-//     z-index: 50 !important;
-// }
-
+.header-container {
+  width: 30%;
+    border-bottom: 3px solid red !important;
+}
 
 #header h2 {
-  // margin-bottom: 0;
-  // z-index: 5;
+
   color: rgba(255,231,158,0.9) !important;
 }
 
 #header-content  {
-  // z-index: 5;
+
   width: 100%;
 }
 
