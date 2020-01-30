@@ -50,8 +50,6 @@ h1, h2 {
 
 h2 {
     font-size: 1.4em !important;
-    // margin-top: -0.5em !important;
-    // margin-bottom: .3em !important;
 }
 
 #header h2 {
@@ -60,10 +58,8 @@ h2 {
 }
 
 #header-content  {
-
   width: 100%;
 }
-
 
 img#headshot {
   width: 300px;
@@ -79,7 +75,6 @@ img#headshot {
   opacity: 100% !important;
   z-index: 50 !important;
 }
-
 
 .header-text {
   width: 700px;
@@ -97,7 +92,6 @@ img#headshot {
 
   color: #05244F;
   background-color: white;
-  // opacity: 0.8;
 
   border-radius: 20px;
 
@@ -109,6 +103,7 @@ img#headshot {
 }
 
 // REMOVE BACKGROUND LINES
+
 #header::after, #header::before {
   display: none !important;
 }
