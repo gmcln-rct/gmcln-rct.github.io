@@ -180,6 +180,28 @@ ul.skills-languages svg {
 a.icon.brands {
   font-size: 2em !important; }
 
+.typewriter h1 {
+  font-size: 1rem;
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange;
+  /* The typwriter cursor */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em;
+  /* Adjust as needed */
+  animation: typing 3.5s steps(40, end); }
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0; }
+  to {
+    width: 100%; } }
+
+/* The typewriter cursor effect */
 @media screen and (max-width: 1600px) {
   header.major {
     margin-top: 1em; }
