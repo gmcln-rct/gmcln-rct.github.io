@@ -10,7 +10,7 @@ body {
   background-size: cover; }
 
 #main {
-  margin-top: -200px !important; }
+  margin-top: -20rem !important; }
 
 #main::before {
   top: 300px !important; }
@@ -20,7 +20,8 @@ h1, h2 {
   font-size: 2rem; }
 
 #header {
-  padding-top: 4em !important; }
+  margin: 1rem;
+  padding-top: 4rem !important; }
 
 .header-container {
   width: 32rem;
@@ -116,7 +117,10 @@ header.major p {
   margin: 0 !important;
   padding: 2em !important;
   font-size: 1.4em !important;
-  text-transform: none !important; }
+  text-transform: none !important;
+  font-weight: 400;
+  text-align: left;
+  color: #05244f; }
 
 .skills {
   border-radius: 10px; }

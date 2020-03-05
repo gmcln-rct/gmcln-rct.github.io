@@ -9,12 +9,10 @@ body {
       -moz-background-size: cover;
       -o-background-size: cover;
     background-size: cover;
-
-
 }
 
 #main {
-    margin-top: -200px !important;
+    margin-top: -20rem !important;
 
 }
 #main::before {
@@ -30,7 +28,8 @@ h1, h2 {
 
 
 #header {
-  padding-top: 4em !important;
+  margin: 1rem;
+  padding-top: 4rem !important;
 }
 
 .header-container {
@@ -124,7 +123,6 @@ img#headshot {
 a.resume-button {
   // display: inline-block;
   width: 200px !important;
-  // max-width: 50%;
   margin-top: 40px;
   padding: 10px 50px;
 
@@ -144,17 +142,14 @@ a.resume-button {
 // BACKGROUND SECTION
 
 header.major {
-  // opacity: 0.9;
 
   margin-top: 6em !important;
-
   border-radius: 20px;
   text-decoration: none;
 
 }
 
-.bg-header {
-
+.bg-header {  
   font-size: 2rem;
   font-weight: 700;
   padding: 0 0 2vmin 0;
@@ -170,7 +165,10 @@ header.major p {
 
   font-size: 1.4em !important;
   text-transform: none !important;
+  font-weight: 400;
+  text-align: left;
 
+  color: rgb(5,36,79);
 }
 
 
