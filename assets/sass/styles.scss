@@ -23,6 +23,7 @@ body {
 
 h1, h2 {
   color: white !important;
+  font-size: 2rem;
 
 }
 
@@ -62,6 +63,7 @@ h1, h2 {
 
 #header-content  {
   width: 100%;
+
 }
 
 img#headshot {
@@ -148,8 +150,15 @@ header.major {
 
   border-radius: 20px;
   text-decoration: none;
+
 }
 
+.bg-header {
+
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 0 0 2vmin 0;
+}
 
 header.major.last h2 {
   font-size: 2em !important;
@@ -163,6 +172,7 @@ header.major p {
   text-transform: none !important;
 
 }
+
 
 // SKILLS SECTION
 
