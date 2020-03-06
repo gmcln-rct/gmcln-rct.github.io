@@ -8,7 +8,7 @@ body {
   background-size: cover; }
 
 #main {
-  margin-top: -20rem !important; }
+  margin-top: -12rem !important; }
 
 #main::before {
   top: 300px !important; }
