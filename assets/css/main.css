@@ -75,6 +75,8 @@ img#headshot {
   background-color: white;
   border-radius: 20px;
   z-index: 50 !important; }
+  .header-text a {
+    color: #6d5ba2 !important; }
 
 .header-text b {
   color: #05244F !important; }
