@@ -1,6 +1,6 @@
 {
   "name": "glennmcclanan.github.io",
-  "homepage": "www.glennnmcclanan.com",
+  "homepage": "https://github.com/gmcln-rct/glennmcclanan.github.io#readme",
   "version": "1.0.0",
   "description": "Portfolio site for Glenn McClanan - Software Engineer",
   "main": "index.js",
@@ -17,7 +17,6 @@
   "bugs": {
     "url": "https://github.com/gmcln-rct/glennmcclanan.github.io/issues"
   },
-  "homepage": "https://github.com/gmcln-rct/glennmcclanan.github.io#readme",
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "gulp": "^4.0.2",
