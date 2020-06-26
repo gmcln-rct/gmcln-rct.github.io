@@ -1,5 +1,8 @@
 @import url("fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic,600,600italic,700,700italic");
+html {
+  scroll-behavior: smooth; }
+
 body {
   overflow-x: hidden;
   background: linear-gradient(0deg, #6d5ba2, #a15b91) no-repeat center center fixed !important;
