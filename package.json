@@ -18,7 +18,7 @@
     "url": "https://github.com/gmcln-rct/glennmcclanan.github.io/issues"
   },
   "devDependencies": {
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^2.26.10",
     "gulp": "^4.0.2",
     "gulp-sass": "^4.0.2"
   }
