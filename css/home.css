@@ -1,0 +1,48 @@
+.contentWrapper #home {
+  width: 100vw;
+  margin: 0 10vmin 0 0;
+  padding: 0 1vmin;
+}
+
+.contentWrapper #home h1, h2 {
+  padding-left: 8vmin;
+  color: white;
+  font-family: century-gothic, sans-serif;
+}
+
+.contentWrapper #home h1{
+  position: absolute;
+  top: 475px;
+  font-size: calc(36px + (96 - 36) * ((100vw - 300px) / (1800 - 300)));
+  font-weight: 700;
+}
+
+.contentWrapper #home h2{
+  position: absolute;
+  top: 570px;
+  margin: 0 1vmin;
+  font-size: calc(20px + (56 - 20) * ((100vw - 300px) / (1800 - 300)));
+  line-height: calc(28px + (60 - 28) * ((100vw - 300px) / (1800 - 300)));
+}
+
+.contentWrapper #home .header-text {
+  position: absolute;
+  top: 75px;
+  left: 50%;
+  /* width: 500px; */
+  max-width: 35%;
+  margin: 0 0 0 2vmin;
+  padding: 1vmin 2vmin;
+  
+  font-family: atten-new, sans-serif;
+  font-size: calc(20px + (32 - 20) * ((100vw - 300px) / (1800 - 300)));
+  line-height: calc(24px + (36 - 24) * ((100vw - 300px) / (1800 - 300)));
+  /* word-wrap: wrap; */
+  
+  color: white;
+}
+
+.contentWrapper #home .header-text a {
+  color: #b9fff5;
+  text-decoration: none;
+}

@@ -1,0 +1,92 @@
+.contact__title {
+  padding: 0 0 5vmin 0;
+
+  font-size: calc(32px + (36 - 32) * ((100vw - 300px) / (1800 - 300)));
+  line-height: calc(36px + (42- 36) * ((100vw - 300px) / (1800 - 300)));
+  font-weight: 600;
+  letter-spacing: 2px;
+
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.contact__subtitle {
+  padding: 0 0 2vmin 0;
+  font-size: calc(24px + (28 - 24) * ((100vw - 300px) / (1800 - 300)));
+  line-height: 36px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-align: center;
+  color: #b9fff5;
+}
+
+/* div.contact-icons {
+  display: flex;
+  justify-content: center;
+}
+.contact-icons i.icons {
+  font-size: 5em; 
+  color: red;
+} */
+
+/* div.contact__wrapper a {
+  color: red;
+} */
+
+div.contact__wrapper ul.contact__icons {
+  display: flex !important;
+  justify-content: space-evenly;
+  align-content: center;
+  /* flex-wrap: wrap; */
+  margin: 2vmin 0;
+
+  /* max-width: 800px; */
+  /* max-width: 90%; */
+
+  /* padding: 2vmin 3vmin; */
+  /* 
+  border-radius: 20px !important; 
+
+  background-color: rgba(255,255,255,0.3);
+  box-shadow: 0px 1px 18px 0px rgba(255,255,255,0.75) inset;
+  -webkit-box-shadow: 0px 1px 18px 0px rgba(255,255,255,0.75) inset;
+  -moz-box-shadow: 0px 1px 18px 0px rgba(255,255,255,0.75) inset; */
+}
+
+ul.contact__icons li {
+  margin: 3vmin;
+
+  margin: 0 2vmin;
+  /* font-weight: 700;
+    font-size: 3rem!important;
+  text-align: center; */
+}
+
+ul.contact__icons li i {
+  margin: 0 0 1vmin 0;
+  font-size: 3em;
+
+  color: #fff;
+}
+
+ul.contact__icons li i:hover {
+  font-size: 3em;
+
+  color: #b9fff5;
+
+  transition: 0.4s;
+}
+
+ul.contact__icons li a {
+  font-size: 1.5em;
+  text-decoration: none;
+
+  color: #b9fff5;
+}
+
+/* .icons.devicon-javascript-plain.colored #contact__icon {
+  font-size: 30px!important;
+
+
+} */

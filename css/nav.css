@@ -1,0 +1,48 @@
+nav {
+  display: flex;
+  justify-content: flex-end;
+  /* width: 100vw; */
+  padding: 5vmin 0 3vmin 0;
+
+  font-family: atten-new, sans-serif;
+
+  background-color: rgba(0, 0, 0, 0);
+}
+
+button {
+  margin: 0 3vmin;
+  padding: 1vmin 2vmin;
+
+  font-family: atten-new, sans-serif;
+  font-weight: 400;
+  font-size: calc(20px + (28 - 20) * ((100vw - 300px) / (1800 - 300)));
+  line-height: calc(28px + (28 - 28) * ((100vw - 300px) / (1800 - 300)));
+  letter-spacing: 3px;
+
+  color: rgb(185, 255, 245);
+  background-color: rgba(0, 0, 0, 0) !important;
+  border: none;
+  border-radius: 10px;
+
+  transition: 0.5s;
+}
+
+button:focus {
+  outline: none;
+}
+
+button.active:focus {
+  outline: #b9fff5 auto 1px;
+}
+
+button:hover {
+  color: rgba(0, 0, 0, 0.5) !important;
+  background-color: rgba(255, 255, 255, 0.7) !important;
+}
+
+button.active {
+  color: #fff !important;
+  background-color: rgba(194, 224, 250, 0.5) !important;
+  border: 1px solid #fff;
+  /* background-color: blue; */
+}

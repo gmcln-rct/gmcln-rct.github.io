@@ -1,0 +1,337 @@
+@import url("https://use.typekit.net/jls5azq.css");
+
+body {
+  /* width: 100%; */
+  /* height: 100%; */
+  margin: 0;
+  overflow: hidden;
+  background: #889cae;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #889cae, #82938d);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #889cae, hsl(159, 7%, 45%));
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/* Tabs */
+
+.wrapper {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  /* margin: 0 auto; */
+  /* background-color: rgba(255,255,255,0.4); */
+  /* border-radius: 10px; */
+  /* box-shadow: 0px 5px 15px rgba(0, 0, 0, .1); */
+}
+
+strong {
+  color: #b9fff5;
+}
+
+.content {
+  display: none;
+  /* height: 100vh; */
+  /* padding: 10px 20px; */
+}
+
+.content.active {
+  display: flex;
+}
+
+strong {
+  font-weight: 700;
+}
+/* .content.inactive {
+  display: none!important;
+} */
+/* .contentWrapper #home{
+
+
+  position: absolute;
+  top: 80px;
+
+} */
+
+/* Home Page Section */
+
+.contentWrapper #home {
+  /* display: flex;*/
+  /* justify-content: center;
+  align-content: center; */
+  /* flex-wrap: wrap; */
+
+  /* position: absolute; */
+  /* top: 80px; */
+  /* width: 90%; */
+  /* margin: 0 0 10vmin 0;
+  padding: 2vmin 15vmin; */
+  /* overflow: scroll; */
+  /* overflow-y:auto; */
+
+  /* background-color: red; */
+}
+
+/* Portfolio Section */
+
+/* .contentWrapper section#portfolio{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: flex-start;
+  /* flex-wrap: wrap; */
+
+/* position: absolute; */
+/* width: 90%; */
+
+/* height: 90vh;
+  margin: 0 0 2vmin 0;
+  padding: 2vmin 15vmin 20vmin 15vmin;
+  overflow: scroll; */
+/* overflow-y:auto; */
+
+/* background-color: red; */
+*/
+
+
+
+/* Skills Section */
+.contentWrapper section#skills {
+  display: flex;
+  justify-content: flex;
+  align-content: center;
+  flex-wrap: wrap;
+
+  position: absolute;
+  /* top: 200px; */
+  /* min-width: 60vw; */
+  max-height: 50vh;
+
+  /* padding: 2vmin 5vmin; */
+
+  font-family: atten-new, sans-serif;
+
+  /* background-color: red; */
+}
+
+/* Contact Section */
+.contentWrapper section#contact {
+  /* display: flex; */
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+
+  position: absolute;
+  top: 50px;
+  width: 100vw;
+  max-height: 50vh;
+  margin: 0 auto;
+
+  padding: 2vmin 5vmin;
+
+  font-family: atten-new, sans-serif;
+
+  color: #fff;
+
+  /* background-color: red; */
+}
+
+/* Cursor Overlay */
+:root {
+  cursor: none;
+  --cursorX: 50vw;
+  --cursorY: 50vh;
+}
+:root:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  pointer-events: none;
+  color: red;
+  background: radial-gradient(
+    circle 3vmax at var(--cursorX) var(--cursorY),
+    rgba(185, 255, 245, 0.9) 0%,
+    rgba(150, 150, 150, 0.1) 80%,
+    rgba(255, 255, 255, 0.01) 100%
+  );
+}
+
+/***
+ *    .___  ___.  _______  _______   __       ___           ______      __    __   _______ .______       __   _______     _______.
+ *    |   \/   | |   ____||       \ |  |     /   \         /  __  \    |  |  |  | |   ____||   _  \     |  | |   ____|   /       |
+ *    |  \  /  | |  |__   |  .--.  ||  |    /  ^  \       |  |  |  |   |  |  |  | |  |__   |  |_)  |    |  | |  |__     |   (----`
+ *    |  |\/|  | |   __|  |  |  |  ||  |   /  /_\  \      |  |  |  |   |  |  |  | |   __|  |      /     |  | |   __|     \   \    
+ *    |  |  |  | |  |____ |  '--'  ||  |  /  _____  \     |  `--'  '--.|  `--'  | |  |____ |  |\  \----.|  | |  |____.----)   |   
+ *    |__|  |__| |_______||_______/ |__| /__/     \__\     \_____\_____\\______/  |_______|| _| `._____||__| |_______|_______/    
+ *                                                                                                                                                                                                                                                                
+ */
+
+/***
+ *     __    ___    _  _      ___      .______   ___   ___ 
+ *    /_ |  / _ \  | || |    / _ \     |   _  \  \  \ /  / 
+ *     | | | | | | | || |_  | | | |    |  |_)  |  \  V  /  
+ *     | | | | | | |__   _| | | | |    |   ___/    >   <   
+ *     | | | |_| |    | |   | |_| |    |  |       /  .  \  
+ *     |_|  \___/     |_|    \___/     | _|      /__/ \__\ 
+ *                                                                                                                 
+ */
+
+@media only screen and (max-width: 1040px) {
+  .contentWrapper #home h2 {
+    top: 540px !important;
+  }
+
+  .contentWrapper #home .header-text {
+    top: 20px;
+  }
+  /* ul.skills-languages {
+      max-width: 80%!important;
+    } */
+}
+
+/***
+ *     ______   ___     ___      .______   ___   ___ 
+ *    |____  | |__ \   / _ \     |   _  \  \  \ /  / 
+ *        / /     ) | | | | |    |  |_)  |  \  V  /  
+ *       / /     / /  | | | |    |   ___/    >   <   
+ *      / /     / /_  | |_| |    |  |       /  .  \  
+ *     /_/     |____|  \___/     | _|      /__/ \__\ 
+                                                  
+ */
+@media only screen and (max-width: 720px) {
+  header {
+    /* margin: 0 8vmin; */
+    /* display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr; */
+  }
+  button {
+    margin: 0 3vmin;
+  }
+
+  .contentWrapper #home h2 {
+    top: 520px !important;
+  }
+
+  .contentWrapper #home .header-text {
+    max-width: 45%;
+  }
+
+  .contentWrapper section#skills {
+    min-width: 80vw;
+    margin: 0 2vw;
+  }
+
+  ul.skills-languages .icons {
+    font-size: 4em !important;
+  }
+
+  ul.skills-languages svg {
+    width: 4em;
+  }
+}
+
+/***
+ *     _  _      ___     ___      .______   ___   ___ 
+ *    | || |    / _ \   / _ \     |   _  \  \  \ /  / 
+ *    | || |_  | (_) | | | | |    |  |_)  |  \  V  /  
+ *    |__   _|  > _ <  | | | |    |   ___/    >   <   
+ *       | |   | (_) | | |_| |    |  |       /  .  \  
+ *       |_|    \___/   \___/     | _|      /__/ \__\                                                
+ */
+
+@media only screen and (max-width: 480px) {
+  header {
+    width: 100vw;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  main.contentWrapper {
+    display: initial;
+    position: initial;
+  }
+
+  .header-text {
+    display: none;
+  }
+
+  .contentWrapper {
+    margin: 0;
+  }
+
+  .contentWrapper #home h1 {
+    top: 350px !important;
+  }
+
+  .contentWrapper #home h2 {
+    top: 390px !important;
+    width: 250px;
+  }
+
+  .contentWrapper #skills {
+    margin: 0 auto;
+  }
+
+  ul.skills-languages {
+    margin: 0;
+  }
+
+  div#skills-title {
+    display: none;
+  }
+
+  .contact__title {
+    display: none;
+  }
+}
+
+/******************************************************
+ *     ____      __     ___      .______   ___   ___ 
+ *    |___ \    / /    / _ \     |   _  \  \  \ /  / 
+ *      __) |  / /_   | | | |    |  |_)  |  \  V  /  
+ *     |__ <  | '_ \  | | | |    |   ___/    >   <   
+ *     ___) | | (_) | | |_| |    |  |       /  .  \  
+ *    |____/   \___/   \___/     | _|      /__/ \__\ 
+ *                                                   
+ ******************************************************/
+
+@media only screen and (max-width: 360px) {
+  /* .contentWrapper h1{
+  top: 65vh;
+  font-size: 72px;
+} */
+
+  .wrapper {
+    height: 100%;
+  }
+  /* .contentWrapper {
+  height: initial;
+} */
+
+  /* Portfolio Section */
+  .contentWrapper #portfolio-list {
+    /* position: absolute; */
+    top: 100px;
+    /* width: 90%; */
+    margin: 0;
+  }
+
+  div#skills-title {
+    display: none !important;
+  }
+
+  /* Contact Section */
+  .contentWrapper section#contact {
+    top: 100px;
+    width: 100vw;
+    max-height: 90vh;
+
+    /* background-color: red; */
+  }
+}

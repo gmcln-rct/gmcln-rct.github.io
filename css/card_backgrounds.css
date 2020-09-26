@@ -1,0 +1,46 @@
+
+/* Card Backgrounds */
+
+.card__image--copoecolher {
+  background-image: url('../images/portfoliio-copoecolher.jpg');
+}
+
+.card__image--writeword {
+  background-image: url('../images/portfoliio-writeword.jpg');
+}
+
+.card__image--seaorgan {
+  background-image: url('../images/projects_sea_organ.jpg');
+}
+
+.card__image--swimeo {
+  background-image: url('../images/projects_swimeo.jpg');
+}
+
+.card__image--honeybadger {
+  background-image: url('../images/portfoliio-honeybadger.jpg');
+}
+
+.card__image--senseability {
+  background-image: url('../images/portfoliio-sensibility.jpg');
+}
+
+.card__image--dataviz {
+  background-image: url('../images/projects_data_viz.jpg');
+}
+
+.card__image--trataka {
+  background-image: url('../images/projects_ephemeralLight.jpg');
+}
+
+.card__image--wyr {
+  background-image: url('../images/projects_wyr.jpg');
+}
+
+.card__image--knowcssfilters {
+  background-image: url('../images/portfoliio-knowcssfilters.jpg');
+}
+
+.card__image--budgetr {
+  background-image: url('../images/portfoliio-budgetr.jpg');
+}
