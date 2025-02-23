@@ -13,14 +13,13 @@
   background-image: url('../images/projects_sea_organ.jpg');
 }
 
-.card__image--senseability {
-  background-image: url('../images/portfoliio-sensibility.jpg');
-}
-
 .card__image--dataviz {
-  background-image: url('../images/projects_data_viz.jpg');
+  background-image: url('../images/winography.png');
 }
 
+.card__image--littlebear {
+  background-image: url('../images/winography.png');
+}
 
 
 .card__image--fasterthan {
