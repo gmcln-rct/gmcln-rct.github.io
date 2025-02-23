@@ -14,13 +14,12 @@
 }
 
 .card__image--dataviz {
-  background-image: url('../images/winography.png');
+  background-image: url('../images/winography.jpg');
 }
 
 .card__image--littlebear {
-  background-image: url('../images/winography.png');
+  background-image: url('../images/winography.jpg');
 }
-
 
 .card__image--fasterthan {
   background-image: url('../images/portfoliio-fasterthan.jpg');
