@@ -118,15 +118,16 @@ const onResize = () => {
     camera.updateProjectionMatrix();
 }
 
-// Setup portfolio scroll effect
+// Portfolio scroll event handler
 const setupPortfolioScroll = () => {
-    // Get the portfolio section and the portfolio title element
+    // Get the portfolio section, list and title elements
     const portfolioSection = document.getElementById('portfolio');
-    const portfolioTitle = portfolioSection.querySelector('#skills-title');
+    const portfolioList = document.getElementById('portfolio-list');
+    const portfolioTitle = document.getElementById('skills-title');
     
-    if (portfolioSection && portfolioTitle) {
-        // Add scroll event listener to the portfolio section itself
-        portfolioSection.addEventListener('scroll', function(e) {
+    if (portfolioSection && portfolioTitle && portfolioList) {
+        // Need to listen to the scroll event on the list, not the section
+        portfolioList.addEventListener('scroll', function() {
             // Check the scroll position
             if (this.scrollTop > 40) {
                 // If scrolled down, hide the title
@@ -136,8 +137,23 @@ const setupPortfolioScroll = () => {
                 portfolioTitle.classList.remove('hidden');
             }
         });
+        
+        // Initial check in case page loads with scroll position
+        if (portfolioList.scrollTop > 40) {
+            portfolioTitle.classList.add('hidden');
+        }
+        
+        console.log('Portfolio scroll event listener attached to:', portfolioList);
+    } else {
+        console.warn('Could not find portfolio elements:', {
+            section: portfolioSection,
+            list: portfolioList,
+            title: portfolioTitle
+        });
     }
 }
+
+
 
 const init = () => {
 

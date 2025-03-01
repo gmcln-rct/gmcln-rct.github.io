@@ -42,57 +42,6 @@ strong {
 strong {
   font-weight: 700;
 }
-/* .content.inactive {
-  display: none!important;
-} */
-/* .contentWrapper #home{
-
-
-  position: absolute;
-  top: 80px;
-
-} */
-
-/* Home Page Section */
-
-.contentWrapper #home {
-  /* display: flex;*/
-  /* justify-content: center;
-  align-content: center; */
-  /* flex-wrap: wrap; */
-
-  /* position: absolute; */
-  /* top: 80px; */
-  /* width: 90%; */
-  /* margin: 0 0 10vmin 0;
-  padding: 2vmin 15vmin; */
-  /* overflow: scroll; */
-  /* overflow-y:auto; */
-
-  /* background-color: red; */
-}
-
-/* Portfolio Section */
-
-/* .contentWrapper section#portfolio{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-content: flex-start;
-  /* flex-wrap: wrap; */
-
-/* position: absolute; */
-/* width: 90%; */
-
-/* height: 90vh;
-  margin: 0 0 2vmin 0;
-  padding: 2vmin 15vmin 20vmin 15vmin;
-  overflow: scroll; */
-/* overflow-y:auto; */
-
-/* background-color: red; */
-*/
-
 
 
 /* Skills Section */
@@ -103,11 +52,7 @@ strong {
   flex-wrap: wrap;
 
   position: absolute;
-  /* top: 200px; */
-  /* min-width: 60vw; */
   max-height: 50vh;
-
-  /* padding: 2vmin 5vmin; */
 
   font-family: atten-new, sans-serif;
 
@@ -310,18 +255,8 @@ strong {
   .wrapper {
     height: 100%;
   }
-  /* .contentWrapper {
-  height: initial;
-} */
 
   /* Portfolio Section */
-  .contentWrapper #portfolio-list {
-    /* position: absolute; */
-    top: 100px;
-    /* width: 90%; */
-
-    margin: 0;
-  }
 
   div#skills-title {
     display: none !important;
