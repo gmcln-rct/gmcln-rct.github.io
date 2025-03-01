@@ -6,7 +6,7 @@ let scene,
     planeMesh;
 
 const noise = new SimplexNoise();
-const textureSize = 64.0;
+const textureSize = 128.0; 
 let particleNum = 5000;
 const maxRange = 1000;
 const minRange = maxRange / 2;
@@ -18,15 +18,45 @@ if (isIOS) {
 }
 
 const drawRadialGradation = (ctx, canvasRadius, canvasW, canvasH) => {
-    ctx.clearRect(0, 0, canvasW, canvasH); // Clear canvas first
+    ctx.clearRect(0, 0, canvasW, canvasH);
     ctx.save();
     const gradient = ctx.createRadialGradient(canvasRadius, canvasRadius, 0, canvasRadius, canvasRadius, canvasRadius);
+    
+    // More gradual transition with additional color stops
     gradient.addColorStop(0, 'rgba(255,255,255,1.0)');
-    gradient.addColorStop(0.5, 'rgba(255,255,255,0.5)');
+    gradient.addColorStop(0.2, 'rgba(255,255,255,0.9)');
+    gradient.addColorStop(0.5, 'rgba(255,255,255,0.8)');
+    gradient.addColorStop(0.7, 'rgba(255,255,255,0.5)');
+    gradient.addColorStop(0.9, 'rgba(255,255,255,0.2)');
     gradient.addColorStop(1, 'rgba(255,255,255,0)');
+    
     ctx.fillStyle = gradient;
     ctx.fillRect(0, 0, canvasW, canvasH);
     ctx.restore();
+}
+
+// Create a special iOS optimized texture with solid white circles
+const getIOSTexture = () => {
+    const canvas = document.createElement('canvas');
+    const ctx = canvas.getContext('2d');
+    
+    const diameter = 32; // Smaller texture for iOS
+    canvas.width = diameter;
+    canvas.height = diameter;
+    const radius = diameter / 2;
+    
+    // Clear canvas
+    ctx.clearRect(0, 0, diameter, diameter);
+    
+    // Draw a solid white circle with a soft edge
+    ctx.beginPath();
+    ctx.arc(radius, radius, radius - 4, 0, Math.PI * 2, false);
+    ctx.fillStyle = 'white';
+    ctx.fill();
+    
+    const texture = new THREE.Texture(canvas);
+    texture.needsUpdate = true;
+    return texture;
 }
 
 const getTexture = () => {
@@ -37,7 +67,7 @@ const getTexture = () => {
     canvas.width = diameter;
     canvas.height = diameter;
     const canvasRadius = diameter / 2;
-
+    
     // Ensure the canvas background is transparent
     ctx.fillStyle = 'rgba(0,0,0,0)';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -48,7 +78,6 @@ const getTexture = () => {
     const texture = new THREE.Texture(canvas);
     texture.needsUpdate = true;
     
-    // Use default filters for better compatibility
     return texture;
 }
 
@@ -204,24 +233,28 @@ const init = () => {
     let pointMaterial;
     
     if (isIOS) {
-        // For iOS, use simple circular points without textures
+        // For iOS, use a simpler texture with solid circle
         pointMaterial = new THREE.PointsMaterial({
-            size: 3,
+            size: 2,                      // Even smaller size for iOS
             color: 0xffffff,
-            opacity: 0.6,
+            map: getIOSTexture(),         // Use iOS-specific texture
             transparent: true,
-            sizeAttenuation: true,
-            blending: THREE.AdditiveBlending
+            opacity: 0.7,
+            depthWrite: false,
+            alphaTest: 0.2,               // Higher alphaTest for iOS
+            blending: THREE.NormalBlending // Normal blending instead of additive for iOS
         });
     } else {
-        // For other platforms, use textured particles
+        // For other platforms, use textured particles with subtle fade
         pointMaterial = new THREE.PointsMaterial({
-            size: 8,
+            size: 6,
             color: 0xffffff,
             map: getTexture(),
             blending: THREE.AdditiveBlending,
             transparent: true,
-            depthWrite: false
+            opacity: 0.9,
+            depthWrite: false,
+            alphaTest: 0.01
         });
     }
 
