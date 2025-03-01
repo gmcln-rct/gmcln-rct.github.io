@@ -1,39 +1,35 @@
-/* .cards {
-    display: flex;
-    justify-content: center;
-    align-content: flex-start;
-    flex-wrap: wrap;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  } */
 
-/* .card {
-  margin: 1vmin;
-  padding: 1vmin;
-  object-fit: contain;
+/* Hide class for the title when scrolling */
+#portfolio #skills-title.hidden {
+  opacity: 0;
+}
 
-  transition: 0.4s;
-} */
-
+/* Add proper scrolling to the portfolio list */
 .contentWrapper #portfolio-list {
   display: flex;
-  /* flex-direction: row; */
   justify-content: center;
   align-content: flex-start;
   flex-wrap: wrap;
+  width: 100%;
+  max-height: calc(100vh - 120px); /* Adjust based on your header height */
+  margin: 0;
+  padding: 8vmin 15vmin 8vmin 15vmin;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
 
-  /* position: absolute; */
-  /* top: 80px; */
-  width: 100vw;
+/* Add padding to bottom of the list for better scrolling experience */
+#portfolio-list::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 20vmin; /* Generous bottom padding */
+  flex-basis: 100%;
+}
 
-  height: 90vh;
-  margin: 0 0 2vmin 0;
-  padding: 8vmin 15vmin 20vmin 15vmin;
-  overflow: scroll;
-  /* overflow-y:auto; */
-
-  /* background-color: red; */
+/* Ensure the last card has extra margin */
+li.cards__item:last-child {
+  margin-bottom: 15vmin;
 }
 
 li.cards__item:last-child {
@@ -47,9 +43,6 @@ li.cards__item:last-child {
   max-width: 300px;
   min-height: 400px;
   padding: 2vmin 1.5vmin;
-
-  /* background-color: rgba(255,255,255,0.5); */
-  /* box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25); */
 
   font-family: atten-new, sans-serif;
 

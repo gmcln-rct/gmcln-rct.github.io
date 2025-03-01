@@ -118,6 +118,26 @@ const onResize = () => {
     camera.updateProjectionMatrix();
 }
 
+// Setup portfolio scroll effect
+const setupPortfolioScroll = () => {
+    // Get the portfolio section and the portfolio title element
+    const portfolioSection = document.getElementById('portfolio');
+    const portfolioTitle = portfolioSection.querySelector('#skills-title');
+    
+    if (portfolioSection && portfolioTitle) {
+        // Add scroll event listener to the portfolio section itself
+        portfolioSection.addEventListener('scroll', function(e) {
+            // Check the scroll position
+            if (this.scrollTop > 40) {
+                // If scrolled down, hide the title
+                portfolioTitle.classList.add('hidden');
+            } else {
+                // If at the top, show the title
+                portfolioTitle.classList.remove('hidden');
+            }
+        });
+    }
+}
 
 const init = () => {
 
@@ -225,6 +245,9 @@ const init = () => {
     -------------------------------------------------------------*/
     document.getElementById('WebGL-output').appendChild(renderer.domElement);
     requestAnimationFrame(render);
+    
+    // Set up portfolio scroll after WebGL initialization
+    setupPortfolioScroll();
 }
 
 document.addEventListener('DOMContentLoaded', () => {
