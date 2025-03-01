@@ -21,46 +21,17 @@
   color: #b9fff5;
 }
 
-/* div.contact-icons {
-  display: flex;
-  justify-content: center;
-}
-.contact-icons i.icons {
-  font-size: 5em; 
-  color: red;
-} */
-
-/* div.contact__wrapper a {
-  color: red;
-} */
-
 div.contact__wrapper ul.contact__icons {
   display: flex !important;
   justify-content: space-evenly;
   align-content: center;
   /* flex-wrap: wrap; */
   margin: 2vmin 0;
-
-  /* max-width: 800px; */
-  /* max-width: 90%; */
-
-  /* padding: 2vmin 3vmin; */
-  /* 
-  border-radius: 20px !important; 
-
-  background-color: rgba(255,255,255,0.3);
-  box-shadow: 0px 1px 18px 0px rgba(255,255,255,0.75) inset;
-  -webkit-box-shadow: 0px 1px 18px 0px rgba(255,255,255,0.75) inset;
-  -moz-box-shadow: 0px 1px 18px 0px rgba(255,255,255,0.75) inset; */
 }
 
 ul.contact__icons li {
-  margin: 3vmin;
-
   margin: 0 2vmin;
-  /* font-weight: 700;
-    font-size: 3rem!important;
-  text-align: center; */
+  text-align: center;
 }
 
 ul.contact__icons li i {
@@ -84,9 +55,3 @@ ul.contact__icons li a {
 
   color: #b9fff5;
 }
-
-/* .icons.devicon-javascript-plain.colored #contact__icon {
-  font-size: 30px!important;
-
-
-} */
