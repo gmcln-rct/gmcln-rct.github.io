@@ -1,18 +1,20 @@
-.contact__title {
-  padding: 0 0 5vmin 0;
+/* Contact Section Styles */
 
+/* Contact title */
+.contact__title {
+  padding: 0 0 5vmin;
   font-size: calc(32px + (36 - 32) * ((100vw - 300px) / (1800 - 300)));
-  line-height: calc(36px + (42- 36) * ((100vw - 300px) / (1800 - 300)));
+  line-height: calc(36px + (42 - 36) * ((100vw - 300px) / (1800 - 300)));
   font-weight: 600;
   letter-spacing: 2px;
-
   text-align: center;
   text-transform: uppercase;
   color: #ffffff;
 }
 
+/* Contact subtitle */
 .contact__subtitle {
-  padding: 0 0 2vmin 0;
+  padding: 0 0 2vmin;
   font-size: calc(24px + (28 - 24) * ((100vw - 300px) / (1800 - 300)));
   line-height: 36px;
   font-weight: 600;
@@ -21,37 +23,42 @@
   color: #b9fff5;
 }
 
-div.contact__wrapper ul.contact__icons {
-  display: flex !important;
+/* Contact icons container */
+.contact__wrapper .contact__icons {
+  display: flex;
   justify-content: space-evenly;
-  align-content: center;
-  /* flex-wrap: wrap; */
+  align-items: center;
   margin: 2vmin 0;
 }
 
-ul.contact__icons li {
+/* Icon list items */
+.contact__icons li {
   margin: 0 2vmin;
   text-align: center;
 }
 
-ul.contact__icons li i {
-  margin: 0 0 1vmin 0;
+/* Icon styling */
+.contact__icons li i {
+  margin: 0 0 1vmin;
   font-size: 3em;
-
   color: #fff;
+  transition: color 0.4s ease;
 }
 
-ul.contact__icons li i:hover {
-  font-size: 3em;
-
+.contact__icons li i:hover {
   color: #b9fff5;
-
-  transition: 0.4s;
 }
 
-ul.contact__icons li a {
+/* Icon links */
+.contact__icons li a {
   font-size: 1.5em;
   text-decoration: none;
-
   color: #b9fff5;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 480px) {
+  .contact__title {
+    display: none;
+  }
 }

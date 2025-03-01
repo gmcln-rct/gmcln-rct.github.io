@@ -6,16 +6,23 @@ let scene,
     planeMesh;
 
 const noise = new SimplexNoise();
-const particleNum = 5000;
+const textureSize = 64.0;
+let particleNum = 5000;
 const maxRange = 1000;
 const minRange = maxRange / 2;
-const textureSize = 64.0;
+
+// Device detection
+const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+if (isIOS) {
+    particleNum = 2000; // Reduce particle count on iOS
+}
 
 const drawRadialGradation = (ctx, canvasRadius, canvasW, canvasH) => {
+    ctx.clearRect(0, 0, canvasW, canvasH); // Clear canvas first
     ctx.save();
     const gradient = ctx.createRadialGradient(canvasRadius, canvasRadius, 0, canvasRadius, canvasRadius, canvasRadius);
-    gradient.addColorStop(0, 'rgba(255,255,255,0.8)');
-    gradient.addColorStop(0.5, 'rgba(255,200,200,0.3)');
+    gradient.addColorStop(0, 'rgba(255,255,255,1.0)');
+    gradient.addColorStop(0.5, 'rgba(255,255,255,0.5)');
     gradient.addColorStop(1, 'rgba(255,255,255,0)');
     ctx.fillStyle = gradient;
     ctx.fillRect(0, 0, canvasW, canvasH);
@@ -31,18 +38,17 @@ const getTexture = () => {
     canvas.height = diameter;
     const canvasRadius = diameter / 2;
 
-    /* gradation circle
-    ------------------------ */
+    // Ensure the canvas background is transparent
+    ctx.fillStyle = 'rgba(0,0,0,0)';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    
+    /* gradation circle */
     drawRadialGradation(ctx, canvasRadius, canvas.width, canvas.height);
 
-    /* snow crystal
-    ------------------------ */
-    // drawSnowCrystal(ctx, canvasRadius);
-
     const texture = new THREE.Texture(canvas);
-    //texture.minFilter = THREE.NearestFilter;
-    texture.type = THREE.FloatType;
     texture.needsUpdate = true;
+    
+    // Use default filters for better compatibility
     return texture;
 }
 
@@ -59,12 +65,7 @@ const makeRoughGround = (mesh) => {
             vertex.y * 0.02 + time * 0.00015,
             vertex.z * 0.02 + time * 0.00015,
         ) * 4;
-        const noise3 = noise.noise2D(
-            vertex.x * 0.009 + time * 0.00015,
-            vertex.y * 0.012 + time * 0.00009,
-            vertex.z * 0.015 + time * 0.00015,
-        ) * 4;
-        const distance = (noise1 + noise2 );
+        const distance = (noise1 + noise2);
         vertex.z = distance;
     })
     mesh.geometry.verticesNeedUpdate = true;
@@ -74,9 +75,6 @@ const makeRoughGround = (mesh) => {
 }
 
 const render = (timeStamp) => {
-
-    // orbitControls.update();
-
     makeRoughGround(planeMesh);
 
     const posArr = particles.geometry.vertices;
@@ -84,10 +82,6 @@ const render = (timeStamp) => {
 
     posArr.forEach((vertex, i) => {
         const velocity = velArr[i];
-
-        const x = i * 3;
-        const y = i * 3 + 1;
-        const z = i * 3 + 2;
 
         const velX = Math.sin(timeStamp * 0.001 * velocity.x) * 0.1;
         const velZ = Math.cos(timeStamp * 0.0005 * velocity.z) * 0.1;
@@ -99,7 +93,6 @@ const render = (timeStamp) => {
         if (vertex.y < -minRange) {
             vertex.y = minRange;
         }
-
     })
 
     particles.geometry.verticesNeedUpdate = true;
@@ -112,7 +105,7 @@ const render = (timeStamp) => {
 const onResize = () => {
     const width = window.innerWidth;
     const height = window.innerHeight;
-    renderer.setPixelRatio(window.devicePixelRatio);
+    renderer.setPixelRatio(window.devicePixelRatio > 2 ? 2 : window.devicePixelRatio);
     renderer.setSize(width, height);
     camera.aspect = width / height;
     camera.updateProjectionMatrix();
@@ -142,21 +135,10 @@ const setupPortfolioScroll = () => {
         if (portfolioList.scrollTop > 40) {
             portfolioTitle.classList.add('hidden');
         }
-        
-        console.log('Portfolio scroll event listener attached to:', portfolioList);
-    } else {
-        console.warn('Could not find portfolio elements:', {
-            section: portfolioSection,
-            list: portfolioList,
-            title: portfolioTitle
-        });
     }
 }
 
-
-
 const init = () => {
-
     /* scene
     -------------------------------------------------------------*/
     scene = new THREE.Scene();
@@ -172,20 +154,13 @@ const init = () => {
     -------------------------------------------------------------*/
     renderer = new THREE.WebGLRenderer({
         antialias: true,
-        alpha: true
+        alpha: true,
+        preserveDrawingBuffer: false
     });
-    renderer.setPixelRatio(window.devicePixelRatio);
-    // renderer.setClearColor(new THREE.Color(0x889cae));
+    renderer.setPixelRatio(window.devicePixelRatio > 2 ? 2 : window.devicePixelRatio);
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.shadowMap.enabled = true;
     renderer.setClearAlpha(0);
-
-    /* OrbitControls
-    -------------------------------------------------------------*/
-    // orbitControls = new THREE.OrbitControls(camera, renderer.domElement);
-    // orbitControls.autoRotate = false;
-    // orbitControls.enableDamping = true;
-    // orbitControls.dampingFactor = 0.2;
 
     /* AmbientLight
     -------------------------------------------------------------*/
@@ -224,21 +199,31 @@ const init = () => {
         const z = Math.floor(Math.random() * maxRange - minRange);
         const particle = new THREE.Vector3(x, y, z);
         pointGeometry.vertices.push(particle);
-        // const color = new THREE.Color(0xffffff);
-        // pointGeometry.colors.push(color);
     }
 
-    const pointMaterial = new THREE.PointsMaterial({
-        size: 8,
-        color: 0xffffff,
-        vertexColors: false,
-        map: getTexture(),
-        // blending: THREE.AdditiveBlending,
-        transparent: true,
-        // opacity: 0.8,
-        fog: true,
-        depthWrite: false
-    });
+    let pointMaterial;
+    
+    if (isIOS) {
+        // For iOS, use simple circular points without textures
+        pointMaterial = new THREE.PointsMaterial({
+            size: 3,
+            color: 0xffffff,
+            opacity: 0.6,
+            transparent: true,
+            sizeAttenuation: true,
+            blending: THREE.AdditiveBlending
+        });
+    } else {
+        // For other platforms, use textured particles
+        pointMaterial = new THREE.PointsMaterial({
+            size: 8,
+            color: 0xffffff,
+            map: getTexture(),
+            blending: THREE.AdditiveBlending,
+            transparent: true,
+            depthWrite: false
+        });
+    }
 
     const velocities = [];
     for (let i = 0; i < particleNum; i++) {

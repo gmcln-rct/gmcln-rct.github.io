@@ -1,91 +1,89 @@
+/* Skills Section Styles */
 
-
-.skills {
-
-  /* margin: 0 auto; */
-  /* width: 100%;  */
-}
-
-
-
-/* div.skill-list {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  background: red;
-} */
-
-div#skills-title {
+/* Skills section title */
+#skills-title {
   position: absolute;
   top: 30px;
   width: 100%;
-
   font-family: atten-new, sans-serif;
   font-size: calc(32px + (36 - 32) * ((100vw - 300px) / (1800 - 300)));
-  line-height: calc(36px + (40- 36) * ((100vw - 300px) / (1800 - 300)));
+  line-height: calc(36px + (40 - 36) * ((100vw - 300px) / (1800 - 300)));
   font-weight: 700;
   letter-spacing: 0.075em; 
   color: #fff;
-
   text-align: center;
   text-transform: uppercase;
-  /* color: #5b5b5b; */
   z-index: 10; 
 }
 
-ul.skills-languages {
-  display: flex !important;
+/* Skills list container */
+.skills-languages {
+  display: flex;
   justify-content: space-evenly;
   align-content: center;
   flex-wrap: wrap;
-  
-  /* max-width: 800px; */
-  /* min-height: 420px; */
-  /* max-width: 90%; */
-  margin: 10vh 20vw 0vh 20vw;
-
-
-  /* margin: 10vmin 2vmin 1vmin 2vmin; */
-  padding: 3vmin 2vmin 2vmin 2vmin;
-
+  margin: 10vh 20vw 0 20vw;
+  padding: 3vmin 2vmin 2vmin;
   font-family: atten-new, sans-serif;
-
-
-  border-radius: 40px !important; 
-
-  background-color: rgba(255,255,255,0.1);
-  box-shadow: 0px 1px 18px 0px rgba(255,255,255,0.75) inset;
-  -webkit-box-shadow: 0px 1px 18px 0px rgba(255,255,255,0.75) inset;
-  -moz-box-shadow: 0px 1px 18px 0px rgba(255,255,255,0.75) inset;
+  border-radius: 40px; 
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 1px 18px 0px rgba(255, 255, 255, 0.75) inset;
 }
 
-ul.skills-languages li {
-  margin:  2vmin 3vmin !important;
+/* Individual skill items */
+.skills-languages li {
+  margin: 2vmin 3vmin;
   font-weight: 700;
   text-align: center;
   color: #fff;
- }
+}
 
- ul.skills-languages li p {
-    padding: 1vmin 0;
+.skills-languages li p {
+  padding: 1vmin 0;
+  font-size: calc(16px + (24 - 16) * ((100vw - 300px) / (1800 - 300)));
+  text-align: center;
+  letter-spacing: 1px;
+}
 
-    font-size: calc(16px + (24 - 16) * ((100vw - 300px) / (1800 - 300)));
-    text-align: center;
-    letter-spacing: 1px;
- }
-
-
-ul.skills-languages .icons {
+/* Skill icons */
+.skills-languages .icons {
   font-size: 5em; 
 }
 
-ul.skills-languages svg {
+.skills-languages svg {
   width: 5em;
   height: auto; 
 }
 
+/* Special icon styles */
 .fa-adobe {
   font-size: 5em;
   color: red;
 }
 
+/* Media Queries */
+@media only screen and (max-width: 720px) {
+  .skills-languages .icons {
+    font-size: 4em;
+  }
+  
+  .skills-languages svg {
+    width: 4em;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .skills-languages {
+    margin: 0;
+  }
+  
+  #skills-title {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  #skills-title {
+    display: none;
+  }
+}
